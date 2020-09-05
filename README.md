@@ -12,6 +12,3 @@ My .config backup repo, just in case.
 * sxhkd
 * qutebrowser
 * ranger
-
-With other backup for files as:
-* fstab
