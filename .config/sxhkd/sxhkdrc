@@ -1,0 +1,43 @@
+# Admonz hotkeys:  (NOTE: do not put comments in the same line with hotkeys
+
+# Browser
+alt + w
+	$BROWSER
+
+# File Explorer
+alt + e
+	$TERMINAL -e ranger
+
+# flameshot screenshot:
+Print
+	flameshot gui
+
+# Media keys:
+
+# music key
+XF86Tools   
+	$TERMINAL -e ncmpcpp
+
+# wheel right
+XF86AudioRaiseVolume
+	pamixer -i 1
+	#mpc volume +1
+
+# wheel left
+XF86AudioLowerVolume  
+	pamixer -d 1
+	#mpc volume -1
+
+XF86AudioMute
+	pamixer -t
+	#mpc toggleoutput 1
+
+XF86AudioNext
+	mpc next
+
+XF86AudioPrev
+	mpc prev
+
+XF86AudioPlay
+	mpc toggle
+

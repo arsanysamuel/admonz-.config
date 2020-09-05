@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# This file is imported in .xinitrc to execute these commands
+
+
+# Keyboard layout settings 
+setxkbmap -model dellusbmm -layout us,ara -option grp:win_space_toggle &
+
+# Enable NUMLOCK
+numlockx  &
+
+# Simple X hotkey daemon
+sxhkd &
+
+# Fix for flameshot
+exec dbus-launch dwm &
+
+# Setting wallpaper - just copy the image to .config and rename it - make sure there is only one image
+xwallpaper --zoom ~/.config/wallpaper.jpg  &
+
+# For window transparency
+xcompmgr -c 
+

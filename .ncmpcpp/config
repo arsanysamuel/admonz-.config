@@ -1,0 +1,24 @@
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "/mnt/Collections_2/youshallnotpass/Music"
+#mpd_music_dir = "~/Downloads"
+
+#look these up
+mpd_connection_timeout = "5"
+mpd_crossfade_time = "5"
+
+ncmpcpp_directory = "~/.ncmpcpp"
+lyrics_directory = "~/.ncmpcpp/lyrics"
+
+# Visualization
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
+
+
+
+# more configuration:
+#  https://computingforgeeks.com/how-to-configure-mpd-and-ncmpcpp-on-linux/
