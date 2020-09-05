@@ -8,8 +8,8 @@ alt + w
 alt + e
 	$TERMINAL -e ranger
 
-# flameshot screenshot:
-Print
+# screenshot:  Print only doesn't work for some reason
+alt + Print
 	flameshot gui
 
 # Media keys:

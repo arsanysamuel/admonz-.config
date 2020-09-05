@@ -9,7 +9,7 @@
 # appends a directory to $PATH to run user custom commands
 export PATH=$PATH:$HOME/.local/bin:$HOME/.user_scripts:$HOME/.config/nvim/plugged/vim-live-latex-preview/bin
 
-export XDG_CONFIG_HOME='$HOME/.config'
+export XDG_CONFIG_HOME=$HOME/.config/
 
 # Setting default applications
 export EDITOR="nvim"

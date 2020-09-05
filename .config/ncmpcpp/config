@@ -7,8 +7,8 @@ mpd_music_dir = "/mnt/Collections_2/youshallnotpass/Music"
 mpd_connection_timeout = "5"
 mpd_crossfade_time = "5"
 
-ncmpcpp_directory = "$XDG_CONFIG_HOME/ncmpcpp"
-lyrics_directory = "$XDG_CONFIG_HOME/ncmpcpp/lyrics"
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.config/ncmpcpp/lyrics"
 
 # Visualization
 visualizer_fifo_path = "/tmp/mpd.fifo"
