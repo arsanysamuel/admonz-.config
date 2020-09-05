@@ -1,6 +1,17 @@
-# admonz-.config
+# My dotfiles
 
 My .config backup repo, just in case.
 
-## Software config:
-* NeoVim
+## Config files for:
+* Bash
+* Xorg
+* DWM
+* ST
+* Vim / NeoVim
+* ncmpcpp, mpd
+* sxhkd
+* qutebrowser
+* ranger
+
+With other backup for files as:
+* fstab
