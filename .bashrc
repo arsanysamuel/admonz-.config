@@ -15,6 +15,7 @@ alias sht='shutdown -h now'
 alias sxiv='sxiv -a'
 alias transmission='tremc'
 alias xclip='xclip -sel clipboard'
+alias dns='opennic-up -f /etc/resolv.conf'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 

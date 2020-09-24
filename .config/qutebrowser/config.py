@@ -651,7 +651,9 @@ c.colors.webpage.darkmode.enabled = True
 ## AppCache. Note that with QtWebKit, only `all` and `never` are
 ## supported as per-domain values. Setting `no-3rdparty` or `no-
 ## unknown-3rdparty` per-domain on QtWebKit will have the same effect as
-## `all`.
+## `all`. If this setting is used with URL patterns, the pattern gets
+## applied to the origin/first party URL of the page making the request,
+## not the request URL.
 ## Type: String
 ## Valid values:
 ##   - all: Accept all cookies.
@@ -749,7 +751,7 @@ c.colors.webpage.darkmode.enabled = True
 
 ## Enable host blocking.
 ## Type: Bool
-# c.content.host_blocking.enabled = True
+c.content.host_blocking.enabled = False
 
 ## List of URLs of lists which contain hosts to block.  The file can be
 ## in one of the following formats:  - An `/etc/hosts`-like file - One
@@ -895,7 +897,9 @@ c.colors.webpage.darkmode.enabled = True
 # c.content.private_browsing = False
 
 ## Proxy to use. In addition to the listed values, you can use a
-## `socks://...` or `http://...` URL.
+## `socks://...` or `http://...` URL. Note that with QtWebEngine, it will
+## take a couple of seconds until the change is applied, if this value is
+## changed at runtime.
 ## Type: Proxy
 ## Valid values:
 ##   - system: Use the system wide proxy.
@@ -1032,11 +1036,10 @@ c.colors.webpage.darkmode.enabled = True
 ## Type: Font
 # c.fonts.debug_console = 'default_size default_family'
 
-# Default font families to use. Whenever "default_family" is used in a
-# font setting, it's replaced with the fonts listed here. If set to an
-# empty value, a system-specific monospace default is used.
-# Type: List of Font, or Font
-#c.fonts.default_family = ["FreeSans", "FreeSerif", "Amiri", "Aref Ruqaa", "LateefGR"]
+## Default font families to use. Whenever "default_family" is used in a
+## font setting, it's replaced with the fonts listed here. If set to an
+## empty value, a system-specific monospace default is used.
+## Type: List of Font, or Font
 c.fonts.default_family = ["Inconsolata", "Aref Ruqaa", "Ubuntu Arabic"]
 
 ## Default font size to use. Whenever "default_size" is used in a font
@@ -1044,7 +1047,7 @@ c.fonts.default_family = ["Inconsolata", "Aref Ruqaa", "Ubuntu Arabic"]
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-# c.fonts.default_size = '10pt'
+c.fonts.default_size = '12pt'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1808,7 +1811,7 @@ c.fonts.default_family = ["Inconsolata", "Aref Ruqaa", "Ubuntu Arabic"]
 
 ## Default zoom level.
 ## Type: Perc
-# c.zoom.default = '100%'
+c.zoom.default = '150%'
 
 ## Available zoom levels.
 ## Type: List of Perc
@@ -2128,18 +2131,16 @@ c.fonts.default_family = ["Inconsolata", "Aref Ruqaa", "Ubuntu Arabic"]
 # config.bind('y', 'prompt-accept yes', mode='yesno')
 
 
+# User Added Config:
 
-# User added config:
-
-# jblock adblocker
 import sys, os
 sys.path.append(os.path.join(sys.path[0], 'jblock'))
 config.source("jblock/jblock/integrations/qutebrowser.py")
 
-c.content.host_blocking.enabled = False  # to avoid conflicts
 c.content.host_blocking.lists = [ \
         "https://easylist.to/easylist/easylist.txt", \
         "https://easylist.to/easylist/easyprivacy.txt", \
         "https://easylist-downloads.adblockplus.org/easylist-cookie.txt", \
         "https://easylist.to/easylist/fanboy-annoyance.txt" \
         ]
+

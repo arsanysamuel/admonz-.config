@@ -9,7 +9,7 @@ alt + e
 	$TERMINAL -e ranger
 
 # screenshot:  Print only doesn't work for some reason
-alt + Print
+ctrl + Print
 	flameshot gui
 
 # Media keys:
@@ -40,4 +40,7 @@ XF86AudioPrev
 
 XF86AudioPlay
 	mpc toggle
+
+XF86AudioStop
+	mpc stop
 
