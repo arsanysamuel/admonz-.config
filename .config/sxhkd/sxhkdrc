@@ -8,7 +8,7 @@ alt + w
 alt + e
 	$TERMINAL -e ranger
 
-# screenshot:  Print only doesn't work for some reason
+# screenshot:  PrintScreen(Print) doesn't work for some reason
 ctrl + Print
 	flameshot gui
 
