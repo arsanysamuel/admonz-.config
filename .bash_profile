@@ -7,7 +7,7 @@
 # These are copied lines from Luke Smith .bash_profile
 
 # appends a directory to $PATH to run user custom commands
-export PATH=$PATH:$HOME/.local/bin:$HOME/.user_scripts:$HOME/.config/nvim/plugged/vim-live-latex-preview/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.scripts:$HOME/.config/nvim/plugged/vim-live-latex-preview/bin
 
 export XDG_CONFIG_HOME=$HOME/.config/
 
