@@ -15,9 +15,11 @@ alias sht='shutdown -h now'
 alias sxiv='sxiv -a'
 alias transmission='tremc'
 alias xclip='xclip -sel clipboard'
-alias dns='sudo opennic-up -f /etc/resolv.conf'
+alias dns-up='sudo opennic-up -f /etc/resolv.conf'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
+
+set -o vi  # open bash in vi-mode
 
 
 ## Right-to-Left language support (Arabic) in terminal:  # fails to start the x server for now

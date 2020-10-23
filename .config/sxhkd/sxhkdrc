@@ -20,12 +20,12 @@ XF86Tools
 
 # wheel right
 XF86AudioRaiseVolume
-	pamixer -i 1
+	pamixer -i 5
 	#mpc volume +1
 
 # wheel left
 XF86AudioLowerVolume  
-	pamixer -d 1
+	pamixer -d 5
 	#mpc volume -1
 
 XF86AudioMute
