@@ -24,3 +24,6 @@ xwallpaper --zoom ~/.config/wallpaper.jpg  &
 # For window transparency
 xcompmgr -c 
 
+# a custom script for multi monitors
+#monitorext
+

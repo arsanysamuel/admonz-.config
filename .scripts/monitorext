@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# excute xrandr in less to view available dispalys and modes 
+
+# orientation could be changed
+xrandr --output VGA-1 --auto --right-of LVDS-1
