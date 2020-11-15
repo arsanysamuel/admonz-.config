@@ -20,7 +20,7 @@ Plug 'tpope/vim-sensible'  " Sensible config for vim
 Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
 
 " IDE Plugins:
-Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server vim-jedi', :CocInstall coc-python coc-jedi
 Plug 'preservim/nerdtree'  " File tree, binded to \
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " for nerdtree file names according to extension, works well with devicons
 Plug 'ryanoasis/vim-devicons'  " showing file icons in nerdtree, nerdfonts is a dependency
