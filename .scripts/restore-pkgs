@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo pacman -S --needed - < $XDG_CONFIG_HOME/pkglist.txt
