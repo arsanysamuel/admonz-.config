@@ -13,11 +13,14 @@ alias sus='systemctl suspend'
 alias rbt='reboot'
 alias sht='shutdown -h now'
 alias open='xdg-open'
+alias cp='cp -rv'
+alias nvim='nvim -pN'
 alias sxiv='sxiv -a'
-alias transmission='tremc'
+alias transmission='stig'
 alias xclip='xclip -sel clipboard'
 alias dns-up='sudo opennic-up -f /etc/resolv.conf'
-alias pipin='python3 -m pip install --user'
+alias pipin='python3 -m pip install --upgrade'
+alias cheat='cht.sh'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 

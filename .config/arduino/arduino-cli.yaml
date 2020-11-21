@@ -1,0 +1,15 @@
+board_manager:
+  additional_urls: []
+daemon:
+  port: "50051"
+directories:
+  data: /home/admonz/.config/arduino
+  downloads: /home/admonz/.config/arduino/staging
+  user: /home/admonz/.config/arduino/user/Arduino
+logging:
+  file: ""
+  format: text
+  level: info
+telemetry:
+  addr: :9090
+  enabled: true

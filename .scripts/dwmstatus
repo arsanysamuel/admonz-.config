@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Show time/date and other status on dwm bar
+
+while true; do
+	xsetroot -name "$(date +"%I:%M:%S %P   %a %d/%m/%Y")"
+	sleep 1
+done
+

@@ -8,9 +8,10 @@ alt + w
 alt + e
 	$TERMINAL -e ranger
 
-# screenshot:  PrintScreen(Print) doesn't work for some reason
-ctrl + Print
+# screenshot: (see github page for info on running with dwm) 
+Print
 	flameshot gui
+	#( flameshot &; ) && ( sleep 0.5s && flameshot gui )
 
 # Media keys:
 

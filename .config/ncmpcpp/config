@@ -18,7 +18,8 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "+|"
 
-
+# Notifications on the song change (could add album art with eye3D)
+execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
 
 # more configuration:
 #  https://computingforgeeks.com/how-to-configure-mpd-and-ncmpcpp-on-linux/

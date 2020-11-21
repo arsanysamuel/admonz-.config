@@ -14,16 +14,18 @@ udiskie &
 
 # Fix for flameshot
 exec dbus-launch dwm &
-
-# Simple X hotkey daemon
-sxhkd &
+flameshot &
 
 # Setting wallpaper - just copy the image to .config and rename it - make sure there is only one image
 xwallpaper --zoom ~/.config/wallpaper.jpg  &
 
-# For window transparency
-xcompmgr -c 
+# Simple X hotkey daemon
+sxhkd &
 
-# a custom script for multi monitors
-#monitorext
+# dwm status bar
+dwmstatus  &
+
+# For window transparency
+xcompmgr -c
+
 

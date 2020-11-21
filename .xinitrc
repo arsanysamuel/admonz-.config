@@ -9,4 +9,4 @@
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 # Execute window manager:
-exec dwm
+#exec dwm

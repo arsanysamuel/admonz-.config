@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This script compiles and and upload arduino code for arduino uno (TODO: more boards to come, user specified port)
+# This script should be run under the sketch folder
+arduino-cli compile -b arduino:avr:uno -v
+arduino-cli upload -b arduino:avr:uno -p /dev/ttyACM0 -v $1

@@ -4,6 +4,7 @@
 "   \ V /| | | | | | | | | (__ 
 "    \_/ |_|_| |_| |_|_|  \___|
 "
+" https://gitlab.com/arsanysamuel/dotfiles
 "
 
 
@@ -77,6 +78,10 @@ syntax on
 
 " expand tabs into spaces
 "set expandtab
+
+" highlight current cursor column and row
+"set cursorcolumn
+"set cursorline
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
