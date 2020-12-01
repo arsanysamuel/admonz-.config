@@ -2141,6 +2141,12 @@ c.content.host_blocking.lists = [ \
         "https://easylist.to/easylist/easylist.txt", \
         "https://easylist.to/easylist/easyprivacy.txt", \
         "https://easylist-downloads.adblockplus.org/easylist-cookie.txt", \
-        "https://easylist.to/easylist/fanboy-annoyance.txt" \
+        "https://easylist.to/easylist/fanboy-annoyance.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2020.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt" \
         ]
 

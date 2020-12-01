@@ -22,8 +22,11 @@ xwallpaper --zoom ~/.config/wallpaper.jpg  &
 # Simple X hotkey daemon
 sxhkd &
 
+# dunst notification daemon
+dunst &
+
 # dwm status bar
-dwmstatus  &
+dwmstatus &
 
 # For window transparency
 xcompmgr -c

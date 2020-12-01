@@ -6,7 +6,7 @@ alt + w
 
 # File Explorer
 alt + e
-	$TERMINAL -e ranger
+	$TERMINAL -e nnn -e  
 
 # screenshot: (see github page for info on running with dwm) 
 Print
