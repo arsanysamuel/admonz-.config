@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# This script cannot work because scripts run in their own subshell
+
+# List python virtual environments inside $HOME/.venv and source the argument
+# TODO: source the environment to the main shell because this script doesn't work, add auto completion from the virtual environments folder
+
+if [ $# -eq 1 ]; then  # must leave spaces around [ , ] , must put ; after ]
+	#echo -e "$#"  # will print 1 because shell doesn't count the $0 argument, $# is the number of arguments without the command
+	if [ -e $HOME/.venv/$1 ]; then  # -e for exitsts
+		source $HOME/.venv/$1/bin/activate 
+		echo -e "$1 has been activated as a python virtual environment"
+	else
+		echo -e "$1 doesn't exits as a virtual environment \n\nVirtual environments available:"
+		ls $HOME/.venv
+	fi
+
+elif [ $# -lt 1 ]; then  # less than
+	echo -e "Virtual environment not specified.\n\nUsage: \n\tpysource <virtual_env> \n\nVirtual environments available:"
+	ls $HOME/.venv
+
+elif [ $# -gt 1 ]; then  # greater than
+	echo -e "Too many arguments. \nUsage: \n\tpysource <virtual_env> \nVirtual environments available:"
+	ls $HOME/.venv
+fi
+

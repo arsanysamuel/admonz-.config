@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+# This is a copy/paste python script that should unzip files with the proprietary windows weird encoding.
+# This is used to avoid this output from the unzip command:
+#      	Archive:  OneDrive_2_11-28-2020.zip
+# 	 error:  cannot create Ϧ+�+�+� 1- ϫ+�Ϻ�� Ϻ+�+�+�Ϻ�� (Ϻ+�ϫϦ+���Ϯ Ϻ+�Ϧ+�+�Ϧ+�+�ϬϦ+�Ϯ).wmv
+# 	         Invalid or incomplete multibyte or wide character
+# 	 error:  cannot create Ϧ+�+�+� ϡϦϺϿ +�Ϧϻ+� Ϻ+�Ϭ+�+�+�Ϯ.wmv
+# 	         Invalid or incomplete multibyte or wide character
+# 
+
+import zipfile
+import sys
+
+zipfile.ZipFile(sys.argv[1], 'r').extractall(sys.argv[2] if len(sys.argv) > 2 else '.')
