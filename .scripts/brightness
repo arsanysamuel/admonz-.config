@@ -4,7 +4,7 @@
 # change screen path for other laptops
 # todo: grep for point in the argument: if floating point produce error.
 
-# Variables:
+# Variables:  cannot put spaces before and after = i think
 max_brightness=$(</sys/class/backlight/acpi_video0/max_brightness)  # cat command in this case considered useless, this is like catting the file into the variable
 current_brightness=$(</sys/class/backlight/acpi_video0/brightness)
 #echo $max_brightness  # echo the variable

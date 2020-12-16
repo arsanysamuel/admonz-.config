@@ -1,9 +1,12 @@
 #!/bin/sh
 
-# Show time/date and other status on dwm bar
+# Show time/date, volume and other status on dwm bar
+# TODO: kill the sleep 1 process every time any status (eg:volume) changes
 
 while true; do
-	xsetroot -name "$(date +"%I:%M:%S %P | %a %d/%m/%Y")"
+	date=$(date +"%I:%M:%S %P | %a %d/%m/%Y")
+	volume=$(pamixer --get-volume-human)  
+	xsetroot -name "volume=$volume | $date"
 	sleep 1
 done
 
