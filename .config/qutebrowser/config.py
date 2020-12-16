@@ -1014,6 +1014,7 @@ c.downloads.location.remember = True
 ## Same as `{column}`, but starting from index 0.
 ## Type: ShellCommand
 # c.editor.command = ['gvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
+c.editor.command = ['st', '-e', 'nvim', '{}']
 
 ## Encoding to use for the editor.
 ## Type: Encoding
@@ -2013,6 +2014,7 @@ c.zoom.default = '150%'
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
+config.bind('e', 'edit-url')  # user added
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')

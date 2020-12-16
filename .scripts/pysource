@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This script cannot work because scripts run in their own subshell
+# This script cannot work because scripts run in their own subshell (cannot source in the main shell) 
 
 # List python virtual environments inside $HOME/.venv and source the argument
 # TODO: source the environment to the main shell because this script doesn't work, add auto completion from the virtual environments folder
