@@ -1,0 +1,10 @@
+# Bindings & Aliases
+
+bind index d half-down
+bind index u half-up
+bind index D delete-message
+bind index U undelete-message
+
+
+alias elhassan elhassan299@gmail.com
+

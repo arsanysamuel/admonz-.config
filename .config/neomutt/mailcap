@@ -1,0 +1,6 @@
+# MIME type files for neomutt
+
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+#image/jpeg; sxiv ; copiousoutput;
+#image/png; sxiv ; copiousoutput;
+

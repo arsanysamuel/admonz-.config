@@ -1,0 +1,66 @@
+#                   _   _            
+#   _ __ ___  _   _| |_| |_ _ __ ___ 
+#  | '_ ` _ \| | | | __| __| '__/ __|
+#  | | | | | | |_| | |_| |_| | | (__ 
+#  |_| |_| |_|\__,_|\__|\__|_|  \___|
+#                                    
+
+# See the Arch Wiki mutt page for configuration guide
+
+# Sourceing files
+source ./mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc  # colors using: https://github.com/altercation/mutt-colors-solarized
+#source ./color.neomuttrc  # to combine this with the prev one and recompile colors
+source ./pass  # use it to set imap and smtp passes
+source ./bindings.neomuttrc
+
+# Setting IMAP folder instead of local email storage (IMAP is the protocol for receiving emails)
+#set folder = "imaps://email_address@imap_server_domain:port"
+set folder = "imaps://arsanysamuel.as@gmail.com@imap.gmail.com:993"
+#set imap_user = "arsanysamuel.as@gmail.com"  # unnecessary for now
+#set imap_pass = "password"
+
+
+
+# Setting SMTP for sending mail
+#set smtp_url = "smtp://email_address@smtp_server_domain:port"
+set smtp_url = "smtp://arsanysamuel.as@gmail.com@smtp.gmail.com:587"
+#set smtp_user = "arsanysamuel.as@gmail.com"
+#set smtp_pass = "password"
+set realname = "Arsany Samuel"
+set from = "arsanysamuel.as@gmail.com"
+
+
+# Sorting
+set sort = "reverse-date"  # email sorting
+set index_format = "%4C| %Z   %d   %-15.15L     %s (%?l?%4l&%4c?)"  # email indes format (check man page)
+set date_format = "%I:%M%p %d/%m/%Y"  # %d format in index_format
+
+# mailcap config: view formats other than plain text
+#https://raymii.org/s/articles/Viewing_PDF_docx_and_odt_files_in_Mutt.html
+#http://www.rdrop.com/docs/mutt/manual86.html
+set mailcap_path = "$XDG_CONFIG_HOME/neomutt/mailcap"
+alternative_order text/plain text/enriched text/html text  # set view priorities
+auto_view text/html  # view html automatically
+
+# Default text editor
+set editor = `echo \$EDITOR`  # ` in config for shell commands, $ should get escaped
+
+# Setting remote folders directory location
+set spoolfile = "+INBOX"  
+set record = "+[Gmail]/Sent"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
+
+set imap_check_subscribed  # check all subscribed imap folders
+set mail_check = 10  # new mail check frequency in seconds
+set timeout = 5  # time mutt will remain idle in seconds (even blocks mail_check)
+
+set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
+
+
+
+### Plugins:
+
+# urlscan: Usage: press ctrl+b to follow links, see: https://github.com/firecat53/urlscan
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
