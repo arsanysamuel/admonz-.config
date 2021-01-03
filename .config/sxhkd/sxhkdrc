@@ -15,7 +15,11 @@ Print
 
 # Media keys:
 
-# music key
+# Email Client
+XF86Explorer
+	$TERMINAL -e neomutt
+
+# Music key
 XF86Tools   
 	$TERMINAL -e ncmpcpp
 

@@ -4,9 +4,10 @@
 # TODO: kill the sleep 1 process every time any status (eg:volume) changes
 
 while true; do
-	date=$(date +"%I:%M:%S %P | %a %d/%m/%Y")
+	date=$(date +"%a %d/%m/%Y")
+	time=$(date +"%I:%M:%S %P")
 	volume=$(pamixer --get-volume-human)  
-	xsetroot -name "volume=$volume | $date"
+	xsetroot -name "Vol:$volume | $time | $date"
 	sleep 1
 done
 

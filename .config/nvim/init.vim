@@ -29,8 +29,10 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Python syntax highligh
 Plug 'majutsushi/tagbar'  " display tags in a window orderd by scope, still needs some configuration
 "Plug 'Xuyuanp/nerdtree-git-plugin'  " showing git status in nerdtree, will use it one day
 "Plug 'airblade/vim-gitgutter'  " shows git diff in the sign column(the one on the left), will get to it later
-Plug 'preservim/nerdcommenter'  " want to install it but too lazy to configure it
-Plug 'skammer/vim-css-color'  " highlights color values with the corresponding color
+Plug 'preservim/nerdcommenter'  " commenting key bindings, needs more config
+"Plug 'chrisbra/Colorizer'
+"Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
+"Plug 'skammer/vim-css-color'  
 "Plug 'ycm-core/YouCompleteMe'  " Syntax completion, coc is a better alternative
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
 
@@ -72,6 +74,10 @@ set number relativenumber
 
 "enable syntax highlight
 syntax on 
+
+"enable spell checking
+set spell spelllang=en_us
+"setlocal spell spelllang=en_us  " for local buffer only
 
 "specify the number of spaces for a tab
 "set tabstop=4 
@@ -129,6 +135,15 @@ let python_highlight_all = 1
 " disables auto commenting on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  
 
+" css color view
+"let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" Color highlight, couldn't configure properly
+" :h Colorizer
+"let g:colorizer_auto_color = 1
+"let g:colorizer_auto_filetype='css,html,py,tex'
+"let g:colorizer_skip_comments = 1
+
 " vimtex flavor for loading vimtex plugin
 let g:tex_flavor = 'latex'
 
@@ -153,7 +168,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " Key Bindings:
 
 "code folding
-nnoremap <space> za
+"nnoremap <space> za  "unneeded for now 
 
 nnoremap \ :NERDTreeToggle<CR>
 " Inside NERDTree keymaps
