@@ -1,10 +1,14 @@
+# vim: filetype=neomuttrc
 # Bindings & Aliases
 
-bind index d half-down
-bind index u half-up
-bind index D delete-message
-bind index U undelete-message
-#bind index \ sidebar-toggle-visible
+bind 	index 	d 		half-down
+bind 	index 	u 		half-up
+bind 	index 	D 		delete-message
+bind 	index 	U 		undelete-message
+bind 	index 	\\		sidebar-toggle-visible
+#bind 	index 	[ 		sidebar-next
+#bind 	index 	] 		sidebar-prev
+#bind 	index 	+ 	 	sidebar-open
 
 alias elhassan elhassan299@gmail.com
 
@@ -14,3 +18,6 @@ alias elhassan elhassan299@gmail.com
 # urlscan: Usage: press ctrl+b to follow links, see: https://github.com/firecat53/urlscan
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+macro index [ "<sidebar-next><sidebar-open>"
+macro index ] "<sidebar-prev><sidebar-open>"

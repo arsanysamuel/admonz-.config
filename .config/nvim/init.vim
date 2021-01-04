@@ -46,6 +46,7 @@ Plug 'junegunn/seoul256.vim'
 "Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
+Plug 'altercation/vim-colors-solarized'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -64,8 +65,10 @@ execute pathogen#infect()
 " Color scheme:
 "colorscheme codedark
 colorscheme gruvbox
-"colo seoul256
+"let g:solarized_termcolors=256
+"colorscheme solarized
 "set background=dark
+"colo seoul256
 "colorscheme nord  " didn't like it that much
 
 "show line numbers and relative numbers to the line

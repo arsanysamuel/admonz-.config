@@ -1,3 +1,4 @@
+# vim: filetype=config nospell
 mpd_host = "127.0.0.1"
 mpd_port = "6600"
 mpd_music_dir = "/mnt/Collections_2/youshallnotpass/Music"
@@ -11,7 +12,7 @@ ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.config/ncmpcpp/lyrics"
 
 # Notifications on the song change (could add album art with eye3D)
-execute_on_song_change = notify-send -i "~/.config/ncmpcpp/music_icon.png" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
+execute_on_song_change = notify-send -i "/usr/share/icons/Adwaita/64x64/mimetypes/audio-x-generic-symbolic.symbolic.png" "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
 
 
 # Visualization

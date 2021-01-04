@@ -50,16 +50,18 @@ set sidebar_visible = yes
 
 # Setting remote folders directory location
 set spoolfile = "+INBOX"  
-set record = "+[Gmail]/Sent"
+set record = "+[Gmail]/Sent Mail"
 set postponed = "+[Gmail]/Drafts"
 set trash = "+[Gmail]/Trash"
 
 set imap_check_subscribed  # check all subscribed imap folders
 set mail_check = 10  # new mail check frequency in seconds
 set timeout = 5  # time mutt will remain idle in seconds (even blocks mail_check)
+set check_new = yes  # for notifications to work
+set new_mail_command = "notify-send -i '/usr/share/icons/Adwaita/64x64/actions/mail-mark-important-symbolic.symbolic.png' 'New Email in %f'  '%n new messages, %u unread.'"
 
 # Active mailboxes
-mailboxes +[Gmail]INBOX
+mailboxes +INBOX
 
 set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
 
