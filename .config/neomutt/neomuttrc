@@ -32,6 +32,7 @@ set from = "arsanysamuel.as@gmail.com"
 
 # Sorting
 set sort = "reverse-date"  # email sorting
+#set sort = "threads"  # sort according to the topic/sender
 set index_format = "%4C| %Z   %d   %-15.15L     %s (%?l?%4l&%4c?)"  # email indes format (check man page)
 set date_format = "%I:%M%p %d/%m/%Y"  # %d format in index_format
 
@@ -45,6 +46,8 @@ auto_view text/html  # view html automatically
 # Default text editor
 set editor = `echo \$EDITOR`  # ` in config for shell commands, $ should get escaped
 
+set sidebar_visible = yes
+
 # Setting remote folders directory location
 set spoolfile = "+INBOX"  
 set record = "+[Gmail]/Sent"
@@ -55,12 +58,9 @@ set imap_check_subscribed  # check all subscribed imap folders
 set mail_check = 10  # new mail check frequency in seconds
 set timeout = 5  # time mutt will remain idle in seconds (even blocks mail_check)
 
+# Active mailboxes
+mailboxes +[Gmail]INBOX
+
 set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
 
 
-
-### Plugins:
-
-# urlscan: Usage: press ctrl+b to follow links, see: https://github.com/firecat53/urlscan
-macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"

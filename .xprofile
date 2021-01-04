@@ -25,10 +25,14 @@ sxhkd &
 # dunst notification daemon
 dunst &
 
-# dwm status bar
-dwmstatus &
+# Scripts
+dwmstatus &  # dwm status bar
+
+# Startup Applications
+exec $TERMINAL -e ncmpcpp &
+exec $(sleep 3; $TERMINAL -e neomutt) &  # sleep to give enough time to connect to imap server
+telegram-desktop &
 
 # For window transparency
 xcompmgr -c
-
 

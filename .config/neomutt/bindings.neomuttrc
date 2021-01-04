@@ -4,7 +4,13 @@ bind index d half-down
 bind index u half-up
 bind index D delete-message
 bind index U undelete-message
-
+#bind index \ sidebar-toggle-visible
 
 alias elhassan elhassan299@gmail.com
 
+
+### Plugins:
+
+# urlscan: Usage: press ctrl+b to follow links, see: https://github.com/firecat53/urlscan
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
