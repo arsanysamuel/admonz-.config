@@ -1,23 +1,35 @@
 # vim: filetype=neomuttrc
 # Bindings & Aliases
 
-bind 	index 	d 		half-down
-bind 	index 	u 		half-up
-bind 	index 	D 		delete-message
-bind 	index 	U 		undelete-message
-bind 	index 	\\		sidebar-toggle-visible
-#bind 	index 	[ 		sidebar-next
-#bind 	index 	] 		sidebar-prev
-#bind 	index 	+ 	 	sidebar-open
+bind 	pager 	j 	next-line
+bind 	pager 	k 	previous-line
+bind 	pager 	\cd 	half-down
+bind 	pager 	\cu 	half-up
+bind 	pager 	h 	exit
+
+bind 	index 	\cd 	half-down
+bind 	index 	\cu 	half-up
+bind 	index 	D 	delete-message
+bind 	index 	U 	undelete-message
+bind 	index 	\\	sidebar-toggle-visible
+bind 	index 	l	display-message
+#bind 	index 	[ 	sidebar-next
+#bind 	index 	] 	sidebar-prev
+#bind 	index 	+ 	sidebar-open
 
 alias elhassan elhassan299@gmail.com
 
 
-### Plugins:
+### Macros & Plugins:
 
 # urlscan: Usage: press ctrl+b to follow links, see: https://github.com/firecat53/urlscan
 macro index,pager \cl "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro attach,compose \cl "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 
+# Sidebar navigation
 macro index [ "<sidebar-next><sidebar-open>"
 macro index ] "<sidebar-prev><sidebar-open>"
+
+# Mark all new as read:  (make sure it works on N and O combined)
+macro index A "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "Mark all new as read"  # https://brianbuccola.com/how-to-mark-all-emails-as-read-in-mutt/
+macro index A "<tag-pattern>~O<enter><tag-prefix><clear-flag>O<untag-pattern>.<enter>" "Mark all new as read"  # https://brianbuccola.com/how-to-mark-all-emails-as-read-in-mutt/

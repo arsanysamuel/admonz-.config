@@ -1,1 +1,37 @@
+# vim: filetype=config
+" "
+"---GNU/Linux---"
 https://archlinux.org/feeds/news/
+https://www.linux.org/articles/index.rss
+https://static.fsf.org/fsforg/rss/news.xml
+https://planet.gnu.org/rss20.xml
+https://osmc.tv/rss/
+https://www.raspberrypi.org/feed/
+
+" "
+"---Blogs---"
+https://lukesmith.xyz/rss.xml  
+https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt  
+https://www.distrotube.com/videos/index.xml
+https://n-o-d-e.net/rss/rss.xml
+https://hackaday.com/blog/feed/
+
+" "
+"---Youtube---"  # change url to feed with macro @y
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA  # Luke Smith
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg  # DT
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA  # Mental Outlaw
+https://www.youtube.com/feeds/videos.xml?channel_id=UCvrLvII5oxSWEMEkszrxXEA  # N-O-D-E
+https://www.youtube.com/feeds/videos.xml?channel_id=UCfMJ2MchTSW2kWaT0kK94Yw  # William Osman
+https://www.youtube.com/feeds/videos.xml?channel_id=UC3TUCGI-7rSjvHsE4ONXRww  # MillenniaThinker
+https://www.youtube.com/feeds/videos.xml?channel_id=UClcE-kVhqyiHCcjYwcpfj9w  # LiveOverflow
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ  # EEVblog
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWr0mx597DnSGLFk1WfvSkQ  # Kalle Halden
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVO8YsD87ibqRGIJ7o8sOzg  # Prince of Zimbabwe
+
+" "
+"---Facebook---"
+https://feed.eugenemolotov.ru/?action=display&bridge=Facebook&context=User&u=https%3A%2F%2Fwww.facebook.com%2Fagr.eng2014%2F&media_type=all&limit=-1&format=Atom  # agriculture engineering department official page
+
+" "
+# Facebook and other social media to be added using self-hosted rss-bridge instance

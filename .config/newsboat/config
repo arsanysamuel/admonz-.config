@@ -90,10 +90,21 @@
 # Default value: n/a
 #
 # bind-key ^R reload-all
-bind-key j next
-bind-key k prev
+#bind-key j next
+bind-key j down
+#bind-key k prev
+bind-key k up
 bind-key J next-feed
 bind-key K prev-feed
+bind-key x delete-article
+bind-key ^X delete-all-articles
+bind-key ^D pagedown
+bind-key ^U pageup
+bind-key ^S save
+bind-key s sort
+bind-key S rev-sort
+bind-key g home
+bind-key G end
 
 ####  bookmark-autopilot
 #
@@ -177,7 +188,13 @@ bind-key K prev-feed
 #
 # Default value: n/a
 #
-# color background white black
+color background white black
+color listnormal cyan default
+color listfocus black yellow standout bold
+color listnormal_unread blue default
+color listfocus_unread yellow default bold
+color info red black bold
+color article white default bold
 
 ####  confirm-mark-all-feeds-read
 #
@@ -260,7 +277,7 @@ bind-key K prev-feed
 #
 # Default value: "%N %V - Dialogs" (localized)
 #
-# dialogs-title-format "%N %V - Dialogs"
+ #dialogs-title-format "%N %V - Dialogs"
 
 ####  dirbrowser-title-format
 #
@@ -342,6 +359,7 @@ bind-key K prev-feed
 # Default value: ""
 #
 # external-url-viewer "urlview"
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"  # don't know what is this
 
 ####  feed-sort-order
 #
@@ -537,7 +555,19 @@ bind-key K prev-feed
 #
 # Default value: n/a
 #
-# highlight all "newsboat" red
+highlight all "newsboat" red
+highlight all "---.*---" yellow
+highlight feedlist ".*(0/0))" black
+highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
+highlight article "(^Link:.*|^Date:.*)" default default
+highlight article "https?://[^ ]+" green default
+highlight article "^(Title):.*$" blue default
+highlight article "\\[[0-9][0-9]*\\]" magenta default bold
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
+highlight article ":.*\\(link\\)$" cyan default
+highlight article ":.*\\(image\\)$" blue default
+highlight article ":.*\\(embedded flash\\)$" magenta default
 
 ####  highlight-article
 #

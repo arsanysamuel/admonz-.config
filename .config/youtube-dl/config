@@ -1,0 +1,5 @@
+# vim: filetype=sh
+
+### Insert youtube-dl command options/arguments
+
+# -f 'bestvideo[height<=144]+bestaudio/best[height<=144]'

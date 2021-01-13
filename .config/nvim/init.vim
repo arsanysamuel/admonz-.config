@@ -48,9 +48,10 @@ Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 Plug 'altercation/vim-colors-solarized'
 
+"Plug 'rlue/vim-barbaric' "useless
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
-
 
 
 " this is for nerd tree after addinf pathogen.vim to ~/.vim/autoload/
@@ -79,8 +80,14 @@ set number relativenumber
 syntax on 
 
 "enable spell checking
-set spell spelllang=en_us
+"set spell spelllang=en_us
 "setlocal spell spelllang=en_us  " for local buffer only
+
+" Arabic Support: noting works
+set encoding=utf-8
+"set termbidi
+"set arabicshape
+"set rl
 
 "specify the number of spaces for a tab
 "set tabstop=4 
@@ -181,17 +188,6 @@ let NERDTreeMapToggleHidden = 'H'
 
 nnoremap ; :TagbarToggle<CR>
 map <C-c> <plug>NERDCommenterToggle
-
-
-
-
-
-
-
-
-
-
-
 
 
 
