@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Declare the list of plugins.
 
 " Misc:
-Plug 'tpope/vim-sensible'  " Sensible config for vim
+Plug 'tpope/vim-sensible'  " Sensible config for vim, tpope is awsome
 Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
 
 " IDE Plugins:
@@ -35,6 +35,9 @@ Plug 'preservim/nerdcommenter'  " commenting key bindings, needs more config
 "Plug 'skammer/vim-css-color'  
 "Plug 'ycm-core/YouCompleteMe'  " Syntax completion, coc is a better alternative
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
+Plug 'Raimondi/delimitMate'  " auto close parenthesis, qutoes, etc.
+"Plug 'tpope/vim-surround'  " mappings for deleting, changing adding parenthesis, etc. incompatible for now 
+
 
 " LaTeX Plugins:
 Plug 'lervag/vimtex'  " some latex thing that I can't get, probably just a bloat
@@ -48,7 +51,7 @@ Plug 'morhetz/gruvbox'
 Plug 'tomasiser/vim-code-dark'
 Plug 'altercation/vim-colors-solarized'
 
-"Plug 'rlue/vim-barbaric' "useless
+"Plug 'rlue/vim-barbaric' "non latin input but useless and non effictive
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

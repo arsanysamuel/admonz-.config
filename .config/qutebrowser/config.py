@@ -1795,6 +1795,7 @@ c.fonts.default_size = '12pt'
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
 # c.url.start_pages = ['https://start.duckduckgo.com']
+c.url.start_pages = ['about:blank']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
@@ -2014,7 +2015,10 @@ c.zoom.default = '150%'
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
-config.bind('e', 'edit-url')  # user added
+
+# my own
+config.bind('e', 'edit-url')
+config.bind(';v', 'hint links spawn --detach mpv {hint-url}')  # open videos in mpv
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')

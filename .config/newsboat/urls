@@ -1,5 +1,5 @@
 # vim: filetype=config
-" "
+
 "---GNU/Linux---"
 https://archlinux.org/feeds/news/
 https://www.linux.org/articles/index.rss
@@ -12,6 +12,7 @@ https://www.raspberrypi.org/feed/
 "---Blogs---"
 https://lukesmith.xyz/rss.xml  
 https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt  
+https://notrelated.libsyn.com/rss
 https://www.distrotube.com/videos/index.xml
 https://n-o-d-e.net/rss/rss.xml
 https://hackaday.com/blog/feed/
@@ -28,10 +29,11 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UClcE-kVhqyiHCcjYwcpfj9w  # 
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2DjFE7Xf11URZqWBigcVOQ  # EEVblog
 https://www.youtube.com/feeds/videos.xml?channel_id=UCWr0mx597DnSGLFk1WfvSkQ  # Kalle Halden
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVO8YsD87ibqRGIJ7o8sOzg  # Prince of Zimbabwe
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwiKHTegfDe33K5wnmyULog  # Gadget Reboot
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6mIxFTvXkWQVEHPsEdflzQ  # Great Scott
 
 " "
 "---Facebook---"
-https://feed.eugenemolotov.ru/?action=display&bridge=Facebook&context=User&u=https%3A%2F%2Fwww.facebook.com%2Fagr.eng2014%2F&media_type=all&limit=-1&format=Atom  # agriculture engineering department official page
+https://feed.eugenemolotov.ru/?action=display&bridge=Facebook&context=User&u=https%3A%2F%2Fwww.facebook.com%2Fagr.eng2014%2F&media_type=all&limit=-1&format=Atom "Agricultural Engineering Department Official Page"  # agriculture engineering department official page
 
-" "
 # Facebook and other social media to be added using self-hosted rss-bridge instance
