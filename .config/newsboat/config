@@ -362,7 +362,7 @@ color article white default bold
 # Default value: ""
 #
 # external-url-viewer "urlview"
-external-url-viewer "urlscan -dc -r 'qutebrowser {}'"  # show urls and open with browser
+external-url-viewer "urlscan -dc -r '$BROWSER {}'"  # show urls and open with browser
 
 ####  feed-sort-order
 #
@@ -805,7 +805,7 @@ highlight article ":.*\\(embedded flash\\)$" magenta default
 # Default value: n/a
 #
 # macro k open; reload; quit
-macro v set browser "mpv %u" ; open-in-browser ; set browser "elinks %u"
+macro v set browser "mpv %u" ; open-in-browser ; set browser "$BROWSER %u"
 
 # to use macros press , then the macro key
 
