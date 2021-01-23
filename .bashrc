@@ -15,6 +15,7 @@ set -o vi  # open bash in vi-mode
 alias sus='systemctl suspend'
 alias rbt='reboot'
 alias sht='shutdown -h now'
+#alias sht='xdotool search "" windowkill %@ && shutdown -h now'  # a solution for shutting down, might try if issues happened, might add to rbt, alt+shift+q as well
 alias open='xdg-open'
 alias cp='cp -rv'
 alias ls='ls --color=auto -h'
@@ -29,9 +30,11 @@ alias cheat='cht.sh'
 alias umount-all='udiskie-umount -a'
 alias arduino='arduino-cli --config-file $XDG_CONFIG_HOME/arduino/arduino-cli.yaml'
 alias arduino-serial='picocom -c'
-alias spraicap="source ~/.venv/spraicap/bin/activate && cd ~/Projects/elhassan/spraicap_robotic_arm/software/spraicap/python"  # temporary alias
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
+
+
+set HISTFILESIZE=100
 
 
 ## Functions:
