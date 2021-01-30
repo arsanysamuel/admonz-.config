@@ -1,1 +1,3 @@
+# vim: filetype=config
 set selection-clipboard clipboard
+set font "monospace normal 14"

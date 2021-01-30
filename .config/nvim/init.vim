@@ -31,7 +31,7 @@ Plug 'majutsushi/tagbar'  " display tags in a window orderd by scope, still need
 "Plug 'airblade/vim-gitgutter'  " shows git diff in the sign column(the one on the left), will get to it later
 Plug 'preservim/nerdcommenter'  " commenting key bindings, needs more config
 "Plug 'chrisbra/Colorizer'
-"Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
+Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
 "Plug 'skammer/vim-css-color'  
 "Plug 'ycm-core/YouCompleteMe'  " Syntax completion, coc is a better alternative
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
@@ -183,13 +183,13 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 "code folding
 "nnoremap <space> za  "unneeded for now 
 
-nnoremap \ :NERDTreeToggle<CR>
+nnoremap [[ :NERDTreeToggle<CR>
 " Inside NERDTree keymaps
 let NERDTreeMapOpenInTab = 't'
 let NERDTreeMapOpenInSplit = 's'
 let NERDTreeMapToggleHidden = 'H'
 
-nnoremap ; :TagbarToggle<CR>
+nnoremap ]] :TagbarToggle<CR>
 map <C-c> <plug>NERDCommenterToggle
 
 
