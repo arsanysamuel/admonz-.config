@@ -806,6 +806,7 @@ highlight article ":.*\\(embedded flash\\)$" magenta default
 #
 # macro k open; reload; quit
 macro v set browser "mpv %u" ; open-in-browser ; set browser "$BROWSER %u"
+macro y set browser "echo %u | xclip -selection clipboard -i" ; open-in-browser ; set browser "$BROWSER %u"
 
 # to use macros press , then the macro key
 

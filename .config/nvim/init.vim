@@ -32,7 +32,6 @@ Plug 'majutsushi/tagbar'  " display tags in a window orderd by scope, still need
 Plug 'preservim/nerdcommenter'  " commenting key bindings, needs more config
 "Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
-"Plug 'skammer/vim-css-color'  
 "Plug 'ycm-core/YouCompleteMe'  " Syntax completion, coc is a better alternative
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
 Plug 'Raimondi/delimitMate'  " auto close parenthesis, qutoes, etc.
@@ -147,9 +146,6 @@ let python_highlight_all = 1
 
 " disables auto commenting on new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o  
-
-" css color view
-"let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 " Color highlight, couldn't configure properly
 " :h Colorizer
