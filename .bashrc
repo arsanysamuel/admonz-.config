@@ -5,9 +5,12 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
 
 # User added:
+
+# Prompt colors:  see ANSI colors on github, \[\e[x;ym\] ___ \[\e[0m\] are the color parenthesis
+PS1="[\[\e[1;92m\]\u\[\e[0m\]@\[\e[1;91m\]\h\[\e[0m\]: \[\e[1;93m\]\W\[\e[0m]\]\$ "  # export used only when the variable is required to be seen by other programs
 
 set -o vi  # open bash in vi-mode
 
@@ -19,6 +22,10 @@ alias sht='shutdown -h now'
 alias open='xdg-open'
 alias cp='cp -rv'
 alias ls='ls --color=auto -h'
+alias mkdir='mkdir -p'
+alias grep='grep --color=auto'
+alias mv='mv -v'
+alias rm='rm -rf'
 alias nvim='nvim -pN'
 alias sxiv='sxiv -a'  # changed sxiv to the aur sxiv bachoseven for full directory browsing, should replace with the script in the arch wiki
 alias nnn='nnn -e'

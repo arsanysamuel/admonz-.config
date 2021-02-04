@@ -4,14 +4,27 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+
 # appends a directory to $PATH to run user custom commands
 export PATH=$PATH:$HOME/.local/bin:$HOME/.scripts:$HOME/.config/nvim/plugged/vim-live-latex-preview/bin
 export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
 
 # Setting default applications
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="qutebrowser"
+
+# HOME directory cleanup:
+export HISTFILE="$XDG_DATA_HOME"/bash/history
+export XAUTHORITY=$XDG_RUNTIME_DIR/xauthority
+export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
+export LESSHISTFILE=-
+# export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 
 # NNN file manager config
 export NNN_BMS='h:~/;m:/mnt;r:/run/media;s:/mnt/Collections/Study/4th year/1st_term/;p:/mnt/Collections/Projects/'
