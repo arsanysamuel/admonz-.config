@@ -10,7 +10,7 @@
 # User added:
 
 # Prompt colors:  see ANSI colors on github, \[\e[x;ym\] ___ \[\e[0m\] are the color parenthesis
-PS1="[\[\e[1;92m\]\u\[\e[0m\]@\[\e[1;91m\]\h\[\e[0m\]: \[\e[1;93m\]\W\[\e[0m]\]\$ "  # export used only when the variable is required to be seen by other programs
+PS1='[\[\e[1;92m\]\u\[\e[0m\]@\[\e[1;91m\]\h\[\e[0m\]: \[\e[1;93m\]\W\[\e[0m]\]\$ '  # export used only when the variable is required to be seen by other programs
 
 set -o vi  # open bash in vi-mode
 
@@ -35,13 +35,17 @@ alias dns-up='sudo opennic-up -f /etc/resolv.conf'
 alias pipin='python3 -m pip install --upgrade'
 alias cheat='cht.sh'
 alias umount-all='udiskie-umount -a'
-alias arduino='arduino-cli --config-file $XDG_CONFIG_HOME/arduino/arduino-cli.yaml'
 alias arduino-serial='picocom -c'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 
 
-set HISTFILESIZE=100
+set HISTFILESIZE=300
+set HISTSIZE=300
+
+# home directory cleanup:
+alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
+alias arduino='arduino-cli --config-file $XDG_CONFIG_HOME/arduino/arduino-cli.yaml'
 
 
 ## Functions:

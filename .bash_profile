@@ -25,6 +25,9 @@ export LESSHISTFILE=-
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
+export GEM_HOME="$XDG_DATA_HOME"/gem
+export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
+
 
 # NNN file manager config
 export NNN_BMS='h:~/;m:/mnt;r:/run/media;s:/mnt/Collections/Study/4th year/1st_term/;p:/mnt/Collections/Projects/'
