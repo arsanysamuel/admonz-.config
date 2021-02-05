@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# To view available outputs excute xrandr in less
+
+xrandr --output LVDS-1 --mode 1366x768
+xrandr --output VGA-1 --off
