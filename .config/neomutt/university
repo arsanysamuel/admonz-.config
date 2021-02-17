@@ -1,0 +1,28 @@
+# vim: filetype=neomuttrc
+
+### University Email Config ###
+
+# MISSING APP PASSWORD FROM MICROSOFT
+source $XDG_CONFIG_HOME/neomutt/university_pass  # use it to set imap and smtp passes for all accounts
+
+# Setting IMAP folder instead of local email storage (IMAP is the protocol for receiving emails)
+#set folder = "imaps://email_address@imap_server_domain:port"
+set folder = "imaps://ersany.mamnsour2015@alexu.edu.eg@outlook.office365.com:993"
+#set imap_user = "ersany.mamnsour2015@alexu.edu.eg"  # unnecessary for now
+#set imap_pass = "password"
+
+# Setting SMTP for sending mail
+#set smtp_url = "smtp://email_address@smtp_server_domain:port"
+set smtp_url = "smtp://ersany.mamnsour2015@alexu.edu.eg@outlook.office365.com:587"
+#set smtp_user = "ersany.mamnsour2015@alexu.edu.eg"
+#set smtp_pass = "password"
+set realname = "Ersany Samuel"
+set from = "ersany.mamnsour2015@alexu.edu.eg"
+
+# Setting remote folders directory location
+# CHANGE THESE TO OUTLOOK
+set spoolfile = "+INBOX"  
+#set record = "+[Gmail]/Sent Mail"
+#set postponed = "+[Gmail]/Drafts"
+#set trash = "+[Gmail]/Trash"
+

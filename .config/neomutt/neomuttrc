@@ -7,28 +7,24 @@
 
 # See the Arch Wiki mutt page for configuration guide
 
-# Sourceing files
-source ./mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc  # colors using: https://github.com/altercation/mutt-colors-solarized
+# Sourcing files
+source $XDG_CONFIG_HOME/neomutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc  # colors using: https://github.com/altercation/mutt-colors-solarized
 #source ./color.neomuttrc  # to combine this with the prev one and recompile colors
-source ./pass  # use it to set imap and smtp passes
-source ./bindings.neomuttrc
-
-# Setting IMAP folder instead of local email storage (IMAP is the protocol for receiving emails)
-#set folder = "imaps://email_address@imap_server_domain:port"
-set folder = "imaps://arsanysamuel.as@gmail.com@imap.gmail.com:993"
-#set imap_user = "arsanysamuel.as@gmail.com"  # unnecessary for now
-#set imap_pass = "password"
+source $XDG_CONFIG_HOME/neomutt//bindings.neomuttrc
 
 
+# Sourcing Accounts:
 
-# Setting SMTP for sending mail
-#set smtp_url = "smtp://email_address@smtp_server_domain:port"
-set smtp_url = "smtp://arsanysamuel.as@gmail.com@smtp.gmail.com:587"
-#set smtp_user = "arsanysamuel.as@gmail.com"
-#set smtp_pass = "password"
-set realname = "Arsany Samuel"
-set from = "arsanysamuel.as@gmail.com"
+# Gmail
+source $XDG_CONFIG_HOME/neomutt/gmail  # arsanysamuel.as@gmail.com
+folder-hook $folder "source $XDG_CONFIG_HOME/neomutt/gmail"
 
+# University 
+#source ./university  # ersany.mamnsour2015@alexu.edu.eg
+#folder-hook $folder "source $XDG_CONFIG_HOME/neomutt/university"
+
+
+# General Config:
 
 # Sorting
 set sort = "reverse-date"  # email sorting
@@ -48,21 +44,13 @@ set editor = `echo \$EDITOR`  # ` in config for shell commands, $ should get esc
 
 set sidebar_visible = yes
 
-# Setting remote folders directory location
-set spoolfile = "+INBOX"  
-set record = "+[Gmail]/Sent Mail"
-set postponed = "+[Gmail]/Drafts"
-set trash = "+[Gmail]/Trash"
-
 set imap_check_subscribed  # check all subscribed imap folders
-set mail_check = 60  # new mail check frequency in seconds
-set timeout = 10  # time mutt will remain idle in seconds (even blocks mail_check)
+set mail_check = 90  # new mail check frequency in seconds
+set timeout = 15  # time mutt will remain idle in seconds (even blocks mail_check)
 set check_new = yes  # for notifications to work
 set new_mail_command = "notify-send -i '/usr/share/icons/Adwaita/64x64/actions/mail-mark-important-symbolic.symbolic.png' 'New Email in %f'  '%n new messages, %u unread.'"
+set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
 
 # Active mailboxes
 mailboxes +INBOX
-
-set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
-
 

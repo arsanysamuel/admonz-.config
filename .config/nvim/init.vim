@@ -188,6 +188,9 @@ let NERDTreeMapToggleHidden = 'H'
 nnoremap ]] :TagbarToggle<CR>
 map <C-c> <plug>NERDCommenterToggle
 
+" mutt/neomutt settings:
+au BufRead /tmp/mutt-* set tw=72  " sets text width to 72 for email buffer
+
 
 
 

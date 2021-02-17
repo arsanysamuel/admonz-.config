@@ -1,0 +1,26 @@
+# vim: filetype=neomuttrc
+
+### Gmail Account Config ###
+
+source $XDG_CONFIG_HOME/neomutt/gmail_pass  # use it to set imap and smtp passes for all accounts
+
+# Setting IMAP folder instead of local email storage (IMAP is the protocol for receiving emails)
+#set folder = "imaps://email_address@imap_server_domain:port"
+set folder = "imaps://arsanysamuel.as@gmail.com@imap.gmail.com:993"
+#set imap_user = "arsanysamuel.as@gmail.com"  # unnecessary for now
+#set imap_pass = "password"
+
+# Setting SMTP for sending mail
+#set smtp_url = "smtp://email_address@smtp_server_domain:port"
+set smtp_url = "smtp://arsanysamuel.as@gmail.com@smtp.gmail.com:587"
+#set smtp_user = "arsanysamuel.as@gmail.com"
+#set smtp_pass = "password"
+set realname = "Arsany Samuel"
+set from = "arsanysamuel.as@gmail.com"
+
+# Setting remote folders directory location
+set spoolfile = "+INBOX"  
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
+
