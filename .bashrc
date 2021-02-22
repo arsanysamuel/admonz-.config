@@ -22,10 +22,10 @@ alias sht='shutdown -h now'
 alias open='xdg-open'
 alias cp='cp -rv'
 alias ls='ls --color=auto -h'
+alias rm='rm -ri'  # I'm a dumbass
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias mv='mv -v'
-alias rm='rm -rf'
 alias nvim='nvim -pN'
 alias sxiv='sxiv -a'  # changed sxiv to the aur sxiv bachoseven for full directory browsing, should replace with the script in the arch wiki
 alias nnn='nnn -e'
@@ -78,6 +78,19 @@ n ()  # opens nnn and cd to the directory when exiting, alternative to shell key
     fi
 }
 
+
+tm ()  # Move to trash
+{
+	mv "$1" ~/.trash/ > /dev/null
+	echo "Moved $1 to ~/.trash."
+}
+
+
+et ()  # Empty trash
+{
+	rm  -rf ~/.trash/*
+	echo "Trash has been emptied."
+}
 
 
 

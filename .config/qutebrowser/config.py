@@ -2286,6 +2286,7 @@ c.zoom.default = '150%'
 config.bind('e', 'edit-url')
 config.bind(';v', 'hint links spawn --detach mpv {hint-url}')
 config.bind(';a', "hint links spawn --detach st -e mpv --ytdl-format='bestaudio/best[height<=360]' {hint-url}")
+config.bind(';p', 'hint links fill :open -p {hint-url}')
 
 
 # Jblock:  OUTDATED (I think)
