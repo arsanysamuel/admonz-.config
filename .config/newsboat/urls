@@ -36,7 +36,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA  # 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUmLRMERmJrmUtgnbFfknAg  # Randy
 
 " "
-"---Facebook---"
-https://feed.eugenemolotov.ru/?action=display&bridge=Facebook&context=User&u=https%3A%2F%2Fwww.facebook.com%2Fagr.eng2014%2F&media_type=all&limit=-1&format=Atom "Agricultural Engineering Department Official Page"  # agriculture engineering department official page
+#"---Facebook---"
+#https://feed.eugenemolotov.ru/?action=display&bridge=Facebook&context=User&u=https%3A%2F%2Fwww.facebook.com%2Fagr.eng2014%2F&media_type=all&limit=-1&format=Atom "Agricultural Engineering Department Official Page"  # agriculture engineering department official page
 
 # Facebook and other social media to be added using self-hosted rss-bridge instance

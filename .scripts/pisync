@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -uvrP --delete-after ~/Projects/self_hosted/website/ admonz@piserver.local:/var/www/sel3awy/

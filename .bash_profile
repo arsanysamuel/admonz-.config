@@ -16,6 +16,9 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="qutebrowser"
 
+# Wallpaper directory
+export WALLPAPERS='/usr/share/backgrounds/'
+
 # HOME directory cleanup:
 export HISTFILE="$XDG_DATA_HOME"/bash/history
 export XAUTHORITY=$XDG_RUNTIME_DIR/xauthority

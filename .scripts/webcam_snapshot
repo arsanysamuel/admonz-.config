@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Take a snap photo from webcam with ffmpeg
+# modify the number of minimum frames according to camera
+
+minimum_frames=3
+
+ffmpeg -f video4linux2 -i /dev/video0 -vframes $minimum_frames "snapshot_%01d.jpg"
+#echo snapshot_{1..$(($minimum_frames-1))}.jpg | xargs rm
+#for i in {1..$(($minimum_frames-1))} do rm snapshot_$i.jpg; done
+for ((i=1;i<$minimum_frames;i++)); do
+	rm snapshot_$i.jpg
+done
+mv snapshot_$minimum_frames.jpg snapshot_$(date +%s).jpg

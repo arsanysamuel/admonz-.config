@@ -662,8 +662,9 @@ c.content.autoplay = False
 c.content.blocking.adblock.lists = [ \
         "https://easylist.to/easylist/easylist.txt", \
         "https://easylist.to/easylist/easyprivacy.txt", \
-        "https://easylist-downloads.adblockplus.org/easylist-cookie.txt", \
+        "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt", \
         "https://easylist.to/easylist/fanboy-annoyance.txt", \
+        "https://secure.fanboy.co.nz/fanboy-annoyance.txt", \
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt", \
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2020.txt", \
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt", \
@@ -2285,7 +2286,7 @@ c.zoom.default = '150%'
 # User added:
 config.bind('e', 'edit-url')
 config.bind(';v', 'hint links spawn --detach mpv {hint-url}')
-config.bind(';a', "hint links spawn --detach st -e mpv --ytdl-format='bestaudio/best[height<=360]' {hint-url}")
+config.bind(';a', 'hint links spawn --detach st -e mpv --ytdl-format="bestaudio" {hint-url}')  # doesn't work properly for some reason
 config.bind(';p', 'hint links fill :open -p {hint-url}')
 
 

@@ -52,5 +52,5 @@ set new_mail_command = "notify-send -i '/usr/share/icons/Adwaita/64x64/actions/m
 set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
 
 # Active mailboxes
-mailboxes +INBOX
+#mailboxes +INBOX
 
