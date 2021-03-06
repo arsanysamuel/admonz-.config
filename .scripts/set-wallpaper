@@ -4,13 +4,23 @@
 # Requirements: sxiv, xwallpaper
 
 help="Usage:\n\t$ set-wallpaper   # Uses the default backgrounds directory /usr/share/backgrounds/\n\t$ set-wallpaper <img_file_or_directory>\nIf a directory all images will open in sxiv, press m to choose then q to exit.\nThe wallpaper directory will be set also in .xprofile"
+backgrounds_dir="/usr/share/backgrounds"
 
 curwal()  # set current wallpaper and change filename in .xprofile
 {
-	abs_path=$(realpath $1)  # get the absoulute path of a file
-	cur_dispaly=$(xrandr | grep -E " connected " | cut -d " " -f 1)  # get the connected display, will work for only one
-	xwallpaper --output $cur_dispaly --zoom $1  # should add more options
-	sed -i 's@.*xwallpaper.*@xwallpaper --output '"$cur_dispaly"' --zoom '"$abs_path"' \&@' $HOME/.xprofile  # substitute wallpaper directory in .xprofile, @ instead of / because variables have slashes, '"variable"' to expand it.
+	if [ $# -eq 1 ]; then
+		abs_path=$(realpath $1)  # get the absoulute path of a file
+		cur_dispaly=$(xrandr | grep -E " connected " | cut -d " " -f 1)  # get the connected display, will work for only one
+		xwallpaper --output $cur_dispaly --zoom $1  # should add more options
+		sed -i 's@.*xwallpaper.*@xwallpaper --output '"$cur_dispaly"' --zoom '"$abs_path"' \&@' $HOME/.xprofile  # substitute wallpaper directory in .xprofile, @ instead of / because variables have slashes, '"variable"' to expand it.
+	
+	elif [ $# -gt 1 ]; then
+		echo -e "ERROR: More than 1 image was selected."
+
+	elif [ $# -lt 1 ]; then
+		echo -e "No Image was selected."
+
+	fi
 }
 
 
@@ -27,10 +37,10 @@ if [ $# -eq 1 ]; then
 		echo -e "ERROR: $1 is not a valid image."
 	fi
 
-elif [ $# -eq 0 ]; then
+elif [ $# -eq 0 -a -d $backgrounds_dir ]; then
 	echo "Choose a wallpaper and press m then exit with q."
 	sleep 2  # allow user to read
-	curwal $(sxiv -r -q -o /usr/share/backgrounds/*)  # functions take arguments as commands (no parenthesis)
+	curwal $(sxiv -r -q -o $backgrounds_dir/*)  # functions take arguments as commands (no parenthesis)
 
 else
 	echo -e $help

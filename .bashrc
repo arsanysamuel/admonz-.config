@@ -10,7 +10,7 @@
 # User added:
 
 # Prompt colors:  see ANSI colors on github, \[\e[x;ym\] ___ \[\e[0m\] are the color parenthesis
-PS1="[\[\e[1;92m\]\u\[\e[0m\]@\[\e[1;91m\]\h\[\e[0m\] \[\e[1;93m\]\W\[\e[0m\]]\$ "  # export used only when the variable is required to be seen by other programs
+PS1="\[\e[1;91m\][\[\e[1;93m\]\u\[\e[1;92m\]@\[\e[1;94m\]\h \[\e[1;96m\]\W\[\e[1;91m\]]\[\e[0m\]\$ "  # export used only when the variable is required to be seen by other programs
 
 set -o vi  # open bash in vi-mode
 
