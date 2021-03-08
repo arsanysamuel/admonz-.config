@@ -18,7 +18,7 @@ set -o vi  # open bash in vi-mode
 alias sus='systemctl suspend'
 alias rbt='reboot'
 alias sht='shutdown -h now'
-#alias sht='xdotool search "" windowkill %@ && shutdown -h now'  # a solution for shutting down, might try if issues happened, might add to rbt, alt+shift+q as well
+#alias sht='xdotool search "" windowkill %@ ; shutdown -h now'  # a solution for shutting down, might try if issues happened, might add to rbt, alt+shift+q as well, still doesn't work
 alias open='xdg-open'
 alias cp='cp -rv'
 alias ls='ls --color=auto -h'
