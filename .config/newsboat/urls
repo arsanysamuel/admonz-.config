@@ -4,7 +4,7 @@
 https://archlinux.org/feeds/news/
 https://www.linux.org/articles/index.rss
 https://static.fsf.org/fsforg/rss/news.xml
-https://planet.gnu.org/rss20.xml
+#https://planet.gnu.org/rss20.xml
 https://osmc.tv/rss/
 https://www.raspberrypi.org/feed/
 
@@ -16,6 +16,10 @@ https://notrelated.libsyn.com/rss
 https://www.distrotube.com/videos/index.xml
 https://n-o-d-e.net/rss/rss.xml
 https://hackaday.com/blog/feed/
+
+" "
+"---Odysee/LBRY---"
+https://lbryfeed.melroy.org/channel/odysee/eevblog
 
 " "
 "---Youtube---"  # change url to feed with macro @y

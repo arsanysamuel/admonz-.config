@@ -156,8 +156,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " vimtex flavor for loading vimtex plugin
 let g:tex_flavor = 'latex'
 
-" LaTeX live view default pdf viewer
+" LaTeX live preview config
 let g:livepreview_previewer = 'zathura'
+let g:livepreview_use_biber = 1
+let g:livepreview_cursorhold_recompile = 0
 
 " This for enabling code folding for python or any indented text with space
 set foldmethod=indent
@@ -166,12 +168,9 @@ set background=dark
 
 set guicursor= " resolving issue of cursor disappear in insert mode in neovim
 
-" for closing ycm scratch menu automatically (because it's annoying)
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-
-" this one is for python syntax plugin, check github page for more options, unused with neovim
-"let python_highlight_all = 1
+"" for closing ycm scratch menu automatically (because it's annoying)  " unused anymore
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+"let g:ycm_autoclose_preview_window_after_completion = 1
 
 
 " Key Bindings:

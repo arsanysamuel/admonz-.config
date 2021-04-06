@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# sorting by date
+
+COUNTER=0
+
+if [ $# -eq 1 ]; then
+	cd $1
+
+	IFS=$'\n'  # Internal Field Separator, set the separator to only \n, for separates on spaces and newlines by default, pay attention to single quotes
+
+	for file in $(ls -1 -tr)
+	do
+		COUNTER=$(($COUNTER+1))
+		#echo "$COUNTER-$file"
+		mv "$file" "$COUNTER-$file"
+	done
+else
+	echo -e "Specify a directory.\n"
+fi
+

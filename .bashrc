@@ -22,7 +22,7 @@ alias sht='shutdown -h now'
 alias open='xdg-open'
 alias cp='cp -rv'
 alias ls='ls --color=auto -h'
-alias rm="echo 'Better use tm mate!';rm -ri"  # I'm a dumbass
+alias rm="rm -i"  # I'm a dumbass
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias mv='mv -v'
@@ -30,12 +30,13 @@ alias nvim='nvim -pN'
 alias sxiv='sxiv -a'  # changed sxiv to the aur sxiv bachoseven for full directory browsing, should replace with the script in the arch wiki
 alias nnn='nnn -e'
 alias transmission='stig'
-alias neomutt='cd $HOME/dls/email_attachments/ && neomutt'
+alias nmutt='cd $HOME/dls/email_attachments/ && neomutt'
 alias xclip='xclip -selection clipboard'
 alias dns-up='sudo opennic-up -f /etc/resolv.conf'
 alias pipin='python3 -m pip install --upgrade'
 alias cheat='cht.sh'
-alias umount-all='udiskie-umount -a'
+alias mnt='udiskie-mount -a'
+alias umnt='udiskie-umount -a'
 alias arduino-serial='picocom -c'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
