@@ -18,8 +18,9 @@ https://n-o-d-e.net/rss/rss.xml
 https://hackaday.com/blog/feed/
 
 " "
-"---Odysee/LBRY---"
-https://lbryfeed.melroy.org/channel/odysee/eevblog
+"---Odysee/LBRY---"  # Unofficial reader
+https://lbryfeed.melroy.org/channel/odysee/eevblog 	# EEVblog
+https://lbryfeed.melroy.org/channel/odysee/AlphaNerd 	# Mental Outlaw
 
 " "
 "---Youtube---"  # change url to feed with macro @y
