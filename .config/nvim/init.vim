@@ -18,7 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Misc:
 Plug 'tpope/vim-sensible'  " Sensible config for vim, tpope is awsome
-Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
+"Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
 
 " IDE Plugins:
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server vim-jedi', :CocInstall coc-python coc-jedi
@@ -35,7 +35,7 @@ Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
 "Plug 'ycm-core/YouCompleteMe'  " Syntax completion, coc is a better alternative
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
 Plug 'Raimondi/delimitMate'  " auto close parenthesis, qutoes, etc.
-"Plug 'tpope/vim-surround'  " mappings for deleting, changing adding parenthesis, etc. incompatible for now 
+"Plug 'vim-syntastic/syntastic'  " syntax checker/linter, needs more config
 
 
 " LaTeX Plugins:
@@ -43,12 +43,15 @@ Plug 'lervag/vimtex'  " some latex thing that I can't get, probably just a bloat
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }  " latex previewer whith :LLPStartPreview
 Plug 'goballooning/vim-live-latex-preview'  " vim live preview realtime
 
+" MD Plugins:
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }  " md live preview, see github if yarn and nodejs are absent
+
 " Colorsheme Plugins:
-Plug 'junegunn/seoul256.vim'   
+"Plug 'junegunn/seoul256.vim'   
 "Plug 'arcticicestudio/nord-vim'
 Plug 'morhetz/gruvbox'
-Plug 'tomasiser/vim-code-dark'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'tomasiser/vim-code-dark'
+"Plug 'altercation/vim-colors-solarized'
 
 "Plug 'rlue/vim-barbaric' "non latin input but useless and non effictive
 
@@ -172,6 +175,12 @@ set guicursor= " resolving issue of cursor disappear in insert mode in neovim
 "let g:ycm_autoclose_preview_window_after_insertion = 1
 "let g:ycm_autoclose_preview_window_after_completion = 1
 
+" mutt/neomutt settings:
+au BufRead /tmp/mutt-* set tw=72  " sets text width to 72 for email buffer
+
+" arabic support 
+set encoding=utf-8
+
 
 " Key Bindings:
 
@@ -187,16 +196,19 @@ let NERDTreeMapToggleHidden = 'H'
 nnoremap ]] :TagbarToggle<CR>
 map <C-c> <plug>NERDCommenterToggle
 
-" mutt/neomutt settings:
-au BufRead /tmp/mutt-* set tw=72  " sets text width to 72 for email buffer
-
-" arabic support 
-set encoding=utf-8
+" md previewer, will improve to preview latex or md depending on extension
+nmap <C-p> <Plug>MarkdownPreviewToggle
 
 
+"" Syntastic sensible config:
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-
-
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 
 

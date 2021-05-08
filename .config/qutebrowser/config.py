@@ -953,15 +953,15 @@ config.set('content.media.audio_capture', True, 'https://www.facebook.com')
 ##   - false
 ##   - ask
 # c.content.notifications = 'ask'
-config.set('content.notifications', False, 'https://ostoday.org')
-config.set('content.notifications', False, 'https://pdf.wondershare.com')
-config.set('content.notifications', False, 'https://rdtk.net')
-config.set('content.notifications', False, 'https://tecadmin.net')
-config.set('content.notifications', False, 'https://web.telegram.org')
-config.set('content.notifications', False, 'https://www.facebook.com')
-config.set('content.notifications', False, 'https://www.nokia.com')
-config.set('content.notifications', False, 'https://www.reddit.com')
-config.set('content.notifications', False, 'https://www.youtube.com')
+config.set('content.notifications.enabled', False, 'https://ostoday.org')
+config.set('content.notifications.enabled', False, 'https://pdf.wondershare.com')
+config.set('content.notifications.enabled', False, 'https://rdtk.net')
+config.set('content.notifications.enabled', False, 'https://tecadmin.net')
+config.set('content.notifications.enabled', False, 'https://web.telegram.org')
+config.set('content.notifications.enabled', False, 'https://www.facebook.com')
+config.set('content.notifications.enabled', False, 'https://www.nokia.com')
+config.set('content.notifications.enabled', False, 'https://www.reddit.com')
+config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 ## Allow pdf.js to view PDF files in the browser. Note that the files can
 ## still be downloaded by clicking the download button in the pdf.js
@@ -2287,7 +2287,8 @@ c.zoom.default = '150%'
 config.bind('e', 'edit-url')
 config.bind(';v', 'hint links spawn --detach mpv {hint-url}')
 config.bind(';a', 'hint links spawn --detach st -e mpv --ytdl-format="bestaudio" {hint-url}')  # doesn't work properly for some reason
-config.bind(';p', 'hint links fill :open -p {hint-url}')
+# config.bind(';p', 'hint links fill :open -p {hint-url}')
+config.bind(';p', 'hint all spawn qutebrowser --target private-window {hint-url}')
 
 
 # Jblock:  OUTDATED (I think)

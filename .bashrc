@@ -27,6 +27,7 @@ alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias mv='mv -v'
 alias nvim='nvim -pN'
+alias bi='bicon.bin'
 alias sxiv='sxiv -a'  # changed sxiv to the aur sxiv bachoseven for full directory browsing, should replace with the script in the arch wiki
 alias nnn='nnn -e'
 alias transmission='stig'
