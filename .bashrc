@@ -81,23 +81,6 @@ n ()  # opens nnn and cd to the directory when exiting, alternative to shell key
 }
 
 
-tm ()  # Move to trash
-{
-	for file in $@
-	do
-		mv "$file" ~/.trash/ > /dev/null
-		echo "Moved $file to ~/.trash."
-	done
-}
-
-
-et ()  # Empty trash
-{
-	rm  -rf ~/.trash/*
-	echo "Trash has been emptied."
-}
-
-
 
 ## Right-to-Left language support (Arabic) in terminal:  # fails to start the x server for now
 #if ! [[ "$(ps -p $(ps -p $(echo $$) -o ppid=) -o comm=)" =~ 'bicon'* ]]; then

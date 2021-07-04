@@ -187,13 +187,13 @@ set encoding=utf-8
 "code folding
 "nnoremap <space> za  "unneeded for now 
 
-nnoremap [[ :NERDTreeToggle<CR>
+nnoremap <F5> :NERDTreeToggle<CR>
 " Inside NERDTree keymaps
 let NERDTreeMapOpenInTab = 't'
 let NERDTreeMapOpenInSplit = 's'
 let NERDTreeMapToggleHidden = 'H'
 
-nnoremap ]] :TagbarToggle<CR>
+nnoremap <F6> :TagbarToggle<CR>
 map <C-c> <plug>NERDCommenterToggle
 
 " md previewer, will improve to preview latex or md depending on extension
