@@ -28,7 +28,7 @@ alias grep='grep --color=auto'
 alias mv='mv -v'
 alias nvim='nvim -pN'
 alias bi='bicon.bin'
-alias sxiv='sxiv -a'  # changed sxiv to the aur sxiv bachoseven for full directory browsing, should replace with the script in the arch wiki
+alias sxiv='rsxiv'  # a script to browse all directroy images in sxiv
 alias nnn='nnn -e'
 alias transmission='stig'
 alias nmutt='cd $HOME/dls/email_attachments/ && neomutt'
@@ -39,6 +39,7 @@ alias cheat='cht.sh'
 alias mnt='udiskie-mount -a'
 alias umnt='udiskie-umount -a'
 alias arduino-serial='picocom -c'
+alias android-qemu='qemu-system-x86_64 -enable-kvm -m 4G -drive file=~/playground/android/android-img.img'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 

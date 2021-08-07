@@ -2,6 +2,10 @@
 
 ### Gmail Account Config ###
 
+# smtp has some errors try to fix it
+set ssl_starttls=no
+set ssl_force_tls=yes
+
 source $XDG_CONFIG_HOME/neomutt/gmail_pass  # use it to set imap and smtp passes for all accounts
 
 # Setting IMAP folder instead of local email storage (IMAP is the protocol for receiving emails)
