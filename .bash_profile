@@ -33,11 +33,13 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 
 
 # NNN file manager config
-export NNN_BMS='h:~/;m:/mnt;r:/run/media;s:/mnt/Collections/Study/;p:/mnt/Collections/Projects/'
+export NNN_BMS='h:~/;m:/mnt;r:/run/media;p:/mnt/Collections/Projects/'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_COLORS='2134'
 export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'  # change later 
 # Commming soon:
+# To use plugings press ; followed by plugin binding
+#export NNN_PLUG='m:dragdrop'  # not working
 #export NNN_PLUG='p:preview-tabbed;n:nuke'
 #export NNN_OPENER=$XDG_CONFIG_HOME/.config/nnn/plugins/nuke
 

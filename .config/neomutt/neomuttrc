@@ -50,6 +50,7 @@ set timeout = 15  # time mutt will remain idle in seconds (even blocks mail_chec
 set check_new = yes  # for notifications to work
 set new_mail_command = "notify-send -i '/usr/share/icons/Adwaita/64x64/actions/mail-mark-important-symbolic.symbolic.png' 'New Email in %f'  '%n new messages, %u unread.'"
 set header_cache = "~/.cache/neomutt/"  # cache directory (clean frequently)
+set copy = no  # don't save duplicate copy of the sent emails
 
 # Active mailboxes
 #mailboxes +INBOX

@@ -36,9 +36,9 @@ gimp
 git
 groff
 grub
-gtop
 gtypist
-htop
+gvfs
+htim
 imagemagick
 inetutils
 intel-ucode
@@ -52,6 +52,7 @@ love
 luit
 lvm2
 m4
+maim
 make
 man-db
 man-pages
@@ -83,7 +84,7 @@ p7zip
 pacman-contrib
 pamix-git
 pamixer
-pandoc
+pandoc-bin
 patch
 pcmanfm
 pdftk
@@ -96,9 +97,11 @@ pypy3
 python-adblock
 python-arabic-reshaper
 python-pip
+qemu
 qt5-tools
 qutebrowser
 ranger
+redshift-minimal
 rsync
 rts_bpp-dkms-git
 ruby
@@ -106,7 +109,7 @@ sc-im
 stig-git
 sudo
 sxhkd
-sxiv-bachoseven-git
+sxiv
 telegram-desktop
 terminus-font
 testdisk
@@ -198,5 +201,9 @@ xwallpaper
 yarn
 youtube-dl
 zathura
+zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
+zathura-ps
+zbar
+zsh
