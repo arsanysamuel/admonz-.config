@@ -21,7 +21,7 @@ Plug 'tpope/vim-sensible'  " Sensible config for vim, tpope is awsome
 "Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
 
 " IDE Plugins:
-Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server vim-jedi', :CocInstall coc-python coc-jedi
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server', :CocInstall coc-python coc-jedi
 Plug 'preservim/nerdtree'  " File tree, binded to \
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " for nerdtree file names according to extension, works well with devicons
 Plug 'ryanoasis/vim-devicons'  " showing file icons in nerdtree, nerdfonts is a dependency
@@ -36,6 +36,7 @@ Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
 Plug 'Raimondi/delimitMate'  " auto close parenthesis, qutoes, etc.
 "Plug 'vim-syntastic/syntastic'  " syntax checker/linter, needs more config
+Plug 'glepnir/indent-guides.nvim'  "indent guide lines
 
 
 " LaTeX Plugins:
@@ -89,7 +90,7 @@ syntax on
 "setlocal spell spelllang=en_us  " for local buffer only
 
 " Arabic Support: noting works
-set encoding=utf-8
+"set encoding=utf-8
 "set termbidi
 "set arabicshape
 "set rl
@@ -139,7 +140,7 @@ set smartcase
 set visualbell 
 
 " set encoding
-set encoding=UTF-8 
+"set encoding=UTF-8 
 
 " auto completion for vim commands
 set wildmode=longest,list,full  
@@ -181,6 +182,9 @@ au BufRead /tmp/mutt-* set tw=72  " sets text width to 72 for email buffer
 " arabic support 
 set encoding=utf-8
 
+" vim clipboard to system clipboard
+set clipboard=unnamedplus
+
 
 " Key Bindings:
 
@@ -211,13 +215,24 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 "let g:syntastic_check_on_wq = 0
 
 
+"jedi venv config
+let g:virtualenv_auto_activate = 1
 
+" jsonc commenting
+  autocmd FileType json syntax match Comment +\/\/.\+$+
 
 
 
 
 
 " NOTE: all of the following lines are COC config
+"Set internal encoding of vim, not needed on neovim, since coc.nvim using some
+" unicode characters in the file autoload/float.vim
+"set encoding=utf-8
+
+" TextEdit might fail if hidden is not set.
+set hidden
+
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -234,7 +249,7 @@ set shortmess+=c
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("patch-8.1.1564")
+if has("nvim-0.5.0") || has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
@@ -262,14 +277,10 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -288,8 +299,10 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
@@ -332,8 +345,18 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+" Remap <C-f> and <C-b> for scroll float windows/popups.
+if has('nvim-0.4.0') || has('patch-8.2.0750')
+  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+endif
+
 " Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
+" Requires 'textDocument/selectionRange' support of language server.
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 

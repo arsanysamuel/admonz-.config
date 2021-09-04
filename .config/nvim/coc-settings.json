@@ -1,0 +1,6 @@
+{
+	// python
+	"python.pythonPath": "python",
+	"python.venvPath": "~/.venv/",
+	"suggest.timeout": 5000
+}

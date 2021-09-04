@@ -11,7 +11,7 @@ curwal()  # set current wallpaper and change filename in .xprofile
 	if [ $# -eq 1 ]; then
 		abs_path=$(realpath $1)  # get the absoulute path of a file
 		cur_dispaly=$(xrandr | grep -E " connected " | cut -d " " -f 1)  # get the connected display, will work for only one
-		xwallpaper --output $cur_dispaly --zoom $1  # should add more options
+		xwallpaper --zoom $1  # should add more options
 		sed -i 's@.*xwallpaper.*@xwallpaper --output '"$cur_dispaly"' --zoom '"$abs_path"' \&@' $HOME/.xprofile  # substitute wallpaper directory in .xprofile, @ instead of / because variables have slashes, '"variable"' to expand it.
 	
 	elif [ $# -gt 1 ]; then
