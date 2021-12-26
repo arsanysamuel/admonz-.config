@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# open nvidia-smi and keep it running with a refresh interval in seconds
+INTERVAL=0.5
+
+watch -n$INTERVAL nvidia-smi
