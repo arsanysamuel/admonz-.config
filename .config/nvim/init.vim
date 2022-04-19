@@ -47,6 +47,9 @@ Plug 'goballooning/vim-live-latex-preview'  " vim live preview realtime
 " MD Plugins:
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }  " md live preview, see github if yarn and nodejs are absent
 
+" Other Languages Plugins:
+Plug 'peterhoeg/vim-qml'  " Qt Qml syntax highlighting
+
 " Colorsheme Plugins:
 "Plug 'junegunn/seoul256.vim'   
 "Plug 'arcticicestudio/nord-vim'

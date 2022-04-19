@@ -40,8 +40,7 @@ alias cheat='cht.sh'
 alias mnt='udiskie-mount -a'
 alias umnt='udiskie-umount -a'
 alias arduino-serial='picocom -c'
-alias android-qemu='qemu-system-x86_64 -enable-kvm -m 4G -drive file=~/playground/android/android-img.img'
-alias facebook='caprine'
+alias android-qemu='qemu-system-x86_64 -enable-kvm -m 4G -drive file=~/unsorted/android/android-img.img'
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 

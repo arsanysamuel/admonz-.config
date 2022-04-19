@@ -2,6 +2,21 @@
 	// python
 	"python.pythonPath": "python",
 	"python.venvPath": "~/.venv/",
-	"suggest.timeout": 5000
+	"suggest.timeout": 5000,
 
+	"languageserver":{
+
+		"arduino":{  // requires: arduino-cli, clang, arduino-language-server
+			"command":"/usr/bin/arduino-language-server",
+			"rootPatterns":["*.ino"],
+			"filetypes":["arduino"],
+			"args":["-cli", "/usr/bin/arduino-cli", "-clangd", "/usr/bin/clangd", "-cli-config", "$HOME/.config/arduino/arduino-cli.yaml", "-fqbn", "arduino:avr"]
+		},
+
+		"clangd": {  // could use some other methods for C completion, requires: clang
+			"command": "clangd",
+			"rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+		}
+	}
 }

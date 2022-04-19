@@ -36,7 +36,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 
 
 # NNN file manager config
-export NNN_BMS='h:~/;m:/mnt;r:/run/media;p:/mnt/Collections/Projects/'
+export NNN_BMS='h:~/;m:/mnt;r:/run/media;p:/mnt/Collections/Projects/;c:~/.config/'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_COLORS='2134'
 export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'  # change later 
