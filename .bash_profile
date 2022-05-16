@@ -34,6 +34,8 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 # Tensorflow extra variable
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 
+# VimWiki PATH
+export VIMWIKI='/mnt/Collections/Projects/vimwiki/'
 
 # NNN file manager config
 export NNN_BMS='h:~/;m:/mnt;r:/run/media;p:/mnt/Collections/Projects/;c:~/.config/'

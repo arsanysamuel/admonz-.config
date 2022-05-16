@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Misc:
 Plug 'tpope/vim-sensible'  " Sensible config for vim, tpope is awsome
 "Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
+Plug 'vimwiki/vimwiki'  " Personal wiki for vim (org mode alternative
 
 " IDE Plugins:
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server', :CocInstall coc-python coc-jedi
@@ -82,11 +83,14 @@ colorscheme gruvbox
 "colorscheme nord  " didn't like it that much
 
 "show line numbers and relative numbers to the line
-
 set number relativenumber  
 
-"enable syntax highlight
+"enable syntax highlight, and for vimwiki and several plugins
 syntax on 
+
+" Vim Wiki Config:
+let g:vimwiki_list = [{'path': '$VIMWIKI',
+			\ 'syntax': 'markdown'}]
 
 "enable spell checking
 "set spell spelllang=en_us
@@ -116,11 +120,12 @@ set autoindent
 
 "detects filetype for syntax highlighting etc
 filetype on 
+filetype plugin on  " for vimwiki
 
 "detects the suitable plugin for every file typeand sets the suitable indentation for it
 filetype indent plugin on 
 
-"removes distro and old features comptability
+"removes distro and old features comptability, and for vimwiki
 set nocompatible 
 
 "to keep the undo history and buffer after closing vim for the same window 
