@@ -680,6 +680,11 @@ c.content.autoplay = False
 ## URL-decoding it).
 ## Type: List of Url
 c.content.blocking.adblock.lists = [ \
+        "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",  \
+        "https://ewpratten.retrylife.ca/youtube_ad_blocklist/hosts.ipv4.txt",  \
+        "https://ewpratten.retrylife.ca/youtube_ad_blocklist/hosts.ipv6.txt",  \
+        "https://ewpratten.retrylife.ca/youtube_ad_blocklist/domains.txt",  \
+        "https://ewpratten.retrylife.ca/youtube_ad_blocklist/dnsmasq.txt",  \
         "https://easylist.to/easylist/easylist.txt", \
         "https://easylist.to/easylist/easyprivacy.txt", \
         "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt", \
