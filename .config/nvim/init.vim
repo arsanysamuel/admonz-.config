@@ -30,6 +30,7 @@ Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Python syntax highligh
 Plug 'majutsushi/tagbar'  " display tags in a window orderd by scope, still needs some configuration
 "Plug 'Xuyuanp/nerdtree-git-plugin'  " showing git status in nerdtree, will use it one day
 "Plug 'airblade/vim-gitgutter'  " shows git diff in the sign column(the one on the left), will get to it later
+Plug 'alvan/vim-closetag'  " Auto close html tag
 Plug 'preservim/nerdcommenter'  " commenting key bindings, needs more config
 "Plug 'chrisbra/Colorizer'
 Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
@@ -50,6 +51,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }  " md l
 
 " Other Languages Plugins:
 Plug 'peterhoeg/vim-qml'  " Qt Qml syntax highlighting
+Plug 'Glench/Vim-Jinja2-Syntax'  " Jinja syntax hightlighting
 
 " Colorsheme Plugins:
 "Plug 'junegunn/seoul256.vim'   
@@ -96,24 +98,27 @@ let g:vimwiki_list = [{'path': '$VIMWIKI',
 "set spell spelllang=en_us
 "setlocal spell spelllang=en_us  " for local buffer only
 
-" Arabic Support: noting works
-"set encoding=utf-8
+" Arabic Support: nothing works
+set arabicshape
 "set termbidi
-"set arabicshape
-"set rl
+"set rl  " changes the screen orientation to rtl
+"set ri  " enables reverse insert
 
 "specify the number of spaces for a tab
-"set tabstop=4 
+set tabstop=4 
 
 " expand tabs into spaces
-"set expandtab
+set expandtab
+
+" Set number of shifts when using >> or <<
+set shiftwidth=4
 
 " highlight current cursor column and row
 "set cursorcolumn
 "set cursorline
 
 " show the matching part of the pair for [] {} and ()
-set showmatch
+"set showmatch
 
 "auto indentation
 set autoindent 
@@ -130,9 +135,6 @@ set nocompatible
 
 "to keep the undo history and buffer after closing vim for the same window 
 set hidden 
-
-" arabic support
-" set arabicshape!
 
 "better commendline completion
 set wildmenu 
@@ -187,7 +189,7 @@ set guicursor= " resolving issue of cursor disappear in insert mode in neovim
 " mutt/neomutt settings:
 au BufRead /tmp/mutt-* set tw=72  " sets text width to 72 for email buffer
 
-" arabic support 
+" utf support 
 set encoding=utf-8
 
 " vim clipboard to system clipboard
@@ -231,6 +233,12 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " qml filetype tab spacing
 autocmd FileType qml setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4
+
+" delimitMate config
+autocmd FileType html let b:loaded_delimitMate = 0  " disable the plugin for html files (conflicts with closetag.vim)
+autocmd FileType jinja.html let b:loaded_delimitMate = 0  " disable the plugin for html files (conflicts with closetag.vim)
+autocmd FileType vim let b:delimitMate_quotes = "'"  " setting quotes in vimrc files to ' only (pairing the double quote is annoying for comments)
+
 
 
 " Coc Official Config:
