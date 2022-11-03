@@ -16,6 +16,9 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="qutebrowser"
 
+# Bash config
+export HISTCONTROL="ignoredups:erasedups"  # don't add duplicated entry to bash histroy, erase all previous duplicates
+
 # Wallpaper directory
 export WALLPAPERS='/usr/share/backgrounds/'
 

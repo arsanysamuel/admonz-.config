@@ -21,7 +21,6 @@ alias sht='shutdown -h now'
 #alias sht='xdotool search "" windowkill %@ ; shutdown -h now'  # a solution for shutting down, might try if issues happened, might add to rbt, alt+shift+q as well, still doesn't work
 alias open='xdg-open'
 alias cp='cp -rv'
-alias ls='ls --color=auto -h'
 alias rm="rm -i"  # I'm a dumbass
 alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
@@ -49,9 +48,25 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for
 set HISTFILESIZE=300
 set HISTSIZE=300
 
+# pacman
+alias remove-orphans='sudo pacman -Rns $(pacman -Qqdt)'
+
 # home directory cleanup:
 alias yarn="yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config"
 alias arduino='arduino-cli --config-file $XDG_CONFIG_HOME/arduino/arduino-cli.yaml'
+
+# Console colors: https://wiki.archlinux.org/title/Color_output_in_console
+alias diff="diff --color=auto"
+alias grep="grep --color=auto"
+alias ip="ip -color=auto"
+export LESS='-R --use-color -Dd+b$Du+c'  # see man less, also colors man
+alias ls='ls --color=auto -h'
+
+# Command not found handler
+source /usr/share/doc/pkgfile/command-not-found.bash  # requires pkgfile, see the wiki to enable automatic updates
+
+# Auto cd
+shopt -s autocd
 
 
 ## Functions:
