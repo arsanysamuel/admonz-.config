@@ -26,6 +26,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dep
 Plug 'preservim/nerdtree'  " File tree, binded to \
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " for nerdtree file names according to extension, works well with devicons
 Plug 'ryanoasis/vim-devicons'  " showing file icons in nerdtree, nerdfonts is a dependency
+Plug 'bfrg/vim-cpp-modern'  " C++ syntax hightlighting
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Python syntax highlighting
 Plug 'majutsushi/tagbar'  " display tags in a window orderd by scope, still needs some configuration
 "Plug 'Xuyuanp/nerdtree-git-plugin'  " showing git status in nerdtree, will use it one day
