@@ -26,6 +26,7 @@ alias mkdir='mkdir -p'
 alias grep='grep --color=auto'
 alias mv='mv -v'
 alias nvim='nvim -pN'
+alias vim='nvim -pN'
 alias bi='bicon.bin'
 alias sxiv='rsxiv'  # a script to browse all directroy images in sxiv
 alias nnn='nnn -e'

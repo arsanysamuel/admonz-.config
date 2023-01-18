@@ -5,16 +5,17 @@ https://archlinux.org/feeds/news/
 https://www.linux.org/articles/index.rss
 https://static.fsf.org/fsforg/rss/news.xml
 #https://planet.gnu.org/rss20.xml
-https://osmc.tv/rss/
+#https://osmc.tv/rss/
 https://www.raspberrypi.org/feed/
 
 " "
 "---Blogs---"
-https://lukesmith.xyz/rss.xml  
+https://lukesmith.xyz/index.xml  
 https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt  
-https://notrelated.libsyn.com/rss
-https://www.distrotube.com/videos/index.xml
+https://notrelated.xyz/rss
+#https://www.distrotube.com/videos/index.xml
 https://n-o-d-e.net/rss/rss.xml
+https://mosfet.net/feed/
 https://hackaday.com/blog/feed/
 
 " "
@@ -40,7 +41,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCq6aw03lNILzV96UvEAASfQ  # 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA  # Fireship (in 100 sec)
 https://www.youtube.com/feeds/videos.xml?channel_id=UCUmLRMERmJrmUtgnbFfknAg  # Randy (crazy game dev)
 https://www.youtube.com/feeds/videos.xml?channel_id=UCS97tchJDq17Qms3cux8wcA  # chrisatmachine (nvim)
-https://www.youtube.com/feeds/videos.xml?channel_id=UChBEbMKI1eCcejTtmI32UEw  # Joshua Weissman (cooking)
+#https://www.youtube.com/feeds/videos.xml?channel_id=UChBEbMKI1eCcejTtmI32UEw  # Joshua Weissman (cooking)
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtHaxi4GTYDpJgMSGy7AeSw  # Michael Reeves
 
 " "
