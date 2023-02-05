@@ -24,3 +24,11 @@ Including config files for:
 - youtube-dl
 - zathura
 - pikaur (AUR helper)
+
+### Usage:
+Clone the bare repo and checkout
+```
+git clone --bare git@github.com:arsanysamuel/dotfiles.git $HOME/.dotfiles
+git --work-tree=$HOME --git-dir=$HOME/.dotfiles/ checkout -f
+```
+The repo git command is aliased to `dotfiles` in `.bashrc`.
