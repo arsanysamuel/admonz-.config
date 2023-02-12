@@ -56,6 +56,6 @@ export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'  # change later
 
 # excutes startx automatically after logging in
 if [[ "$(tty)" = "/dev/tty1" ]]; then  # if the running tty is tty1 (the default tty)
-	pgrep dwm || startx  # find i3 in the processes if not running startx, could change the default wm from ~/.xinitrc, this line could just be startx
+	pgrep dwm || startx  # find dwm in the processes if not running startx, could change the default wm from ~/.xinitrc, this line could just be startx
 fi
 
