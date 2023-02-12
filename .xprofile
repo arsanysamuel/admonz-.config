@@ -17,7 +17,7 @@ exec dbus-launch dwm &
 flameshot &
 
 # Setting wallpaper - just copy the image to .config and rename it - make sure there is only one image
-xwallpaper --output DVI-I-1 --zoom /usr/share/backgrounds/archlinux/small.png &
+xwallpaper --output DVI-I-1 --zoom /usr/share/backgrounds/archlinux/split.png &
 
 # Simple X hotkey daemon
 sxhkd &
