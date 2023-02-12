@@ -10,6 +10,7 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/.scripts:$HOME/.config/nvim/plugged/vim
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CACHE_HOME=$HOME/.cache
+export XDG_STATE_HOME=$HOME/.local/state
 
 # Setting default applications
 export EDITOR="nvim"
@@ -27,12 +28,13 @@ export HISTFILE="$XDG_DATA_HOME"/bash/history
 export XAUTHORITY=$XDG_RUNTIME_DIR/xauthority
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE=-
-# export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
+export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 export GEM_HOME="$XDG_DATA_HOME"/gem
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
+export W3M_DIR="$XDG_STATE_HOME/w3m"
 
 # Tensorflow extra variable
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
@@ -45,6 +47,7 @@ export NNN_BMS='h:~/;m:/mnt;r:/run/media;p:/mnt/Collections/Projects/;c:~/.confi
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_COLORS='2134'
 export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'  # change later 
+
 # Commming soon:
 # To use plugings press ; followed by plugin binding
 #export NNN_PLUG='m:dragdrop'  # not working
