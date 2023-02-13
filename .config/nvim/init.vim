@@ -210,7 +210,7 @@ nnoremap <F6> :TagbarToggle<CR>
 map <C-c> <plug>NERDCommenterToggle
 
 " md previewer, will improve to preview latex or md depending on extension
-nmap <C-p> <Plug>MarkdownPreviewToggle
+autocmd FileType markdown,vimwiki nmap <C-p> <Plug>MarkdownPreviewToggle
 
 
 "" Syntastic sensible config:
