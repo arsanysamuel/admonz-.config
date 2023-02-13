@@ -4,6 +4,10 @@ Configuration files for my ArchLinux setup, DWM and ST sources, shell scripts an
 
 Including config files for:
 - X11 (with startup programs)
+- Suckless tools (as submodules):
+  - dwm
+  - st
+  - dmenu
 - bash
 - nnn
 - Arduino CLI
