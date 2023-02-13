@@ -1,0 +1,9 @@
+[submodule ".config/dwm"]
+	path = .config/dwm
+	url = git@github.com:arsanysamuel/dwm.git
+[submodule ".config/st"]
+	path = .config/st
+	url = git@github.com:arsanysamuel/st.git
+[submodule ".config/dmenu"]
+	path = .config/dmenu
+	url = git@github.com:arsanysamuel/dmenu.git
