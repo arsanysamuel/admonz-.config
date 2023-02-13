@@ -4,6 +4,10 @@ Configuration files for my ArchLinux setup, DWM and ST sources, shell scripts an
 
 Including config files for:
 - X11 (with startup programs)
+- Suckless tools (as submodules):
+  - dwm
+  - st
+  - dmenu
 - bash
 - nnn
 - Arduino CLI
@@ -28,12 +32,19 @@ Including config files for:
 
 
 ### Usage:
-Clone the bare repo and checkout
+1. Clone the bare repo and checkout:
 ```
 git clone --bare git@github.com:arsanysamuel/dotfiles.git $HOME/.dotfiles
 git --work-tree=$HOME --git-dir=$HOME/.dotfiles/ checkout -f
+```
+2. Cleanup the repo:
+```
 rm -f LICENSE README.md
 git --work-tree=$HOME --git-dir=$HOME/.dotfiles/ update-index --skip-worktree LICENSE README.md
 git --work-tree=$HOME --git-dir=$HOME/.dotfiles/ config --local status.showUntrackedFiles no
+```
+3. Clone submodules:
+```
+git --work-tree=$HOME --git-dir=$HOME/.dotfiles/ submodule update --init --recursive
 ```
 The repo git command is aliased to `dotfiles` in `.bashrc`.
