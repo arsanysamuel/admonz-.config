@@ -24,6 +24,8 @@ Including config files for:
 - youtube-dl
 - zathura
 - pikaur (AUR helper)
+- Flameshot
+
 
 ### Usage:
 Clone the bare repo and checkout
