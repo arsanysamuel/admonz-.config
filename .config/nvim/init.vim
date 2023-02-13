@@ -67,10 +67,8 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 
-" this is for nerd tree after addinf pathogen.vim to ~/.vim/autoload/
-execute pathogen#infect()  
-
-
+" WILL BE DEPRICATED: this is for nerd tree after addinf pathogen.vim to ~/.vim/autoload/
+"execute pathogen#infect()
 
 
 
