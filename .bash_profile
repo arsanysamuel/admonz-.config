@@ -28,7 +28,6 @@ export HISTFILE="$XDG_DATA_HOME"/bash/history
 export XAUTHORITY=$XDG_RUNTIME_DIR/xauthority
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export LESSHISTFILE=-
-export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
