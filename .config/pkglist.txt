@@ -139,3 +139,5 @@ zathura-pdf-mupdf
 zathura-ps
 zip
 zsh
+libxcb
+xcb-util
