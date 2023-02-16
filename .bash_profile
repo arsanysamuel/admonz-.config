@@ -34,6 +34,7 @@ export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 export GEM_HOME="$XDG_DATA_HOME"/gem
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export W3M_DIR="$XDG_STATE_HOME/w3m"
+export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.vim" | so $MYVIMRC'
 
 # Tensorflow extra variable
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
