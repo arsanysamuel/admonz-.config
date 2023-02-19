@@ -211,6 +211,7 @@ map <C-c> <plug>NERDCommenterToggle
 
 " md previewer, will improve to preview latex or md depending on extension
 autocmd FileType markdown,vimwiki nmap <C-p> <Plug>MarkdownPreviewToggle
+autocmd FileType tex nmap <C-p> :LLPStartPreview<CR>
 
 
 "" Syntastic sensible config:
