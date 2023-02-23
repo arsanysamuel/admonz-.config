@@ -34,7 +34,6 @@ gimp
 git
 groff
 grub
-gtypist
 htim
 imagemagick
 inetutils
