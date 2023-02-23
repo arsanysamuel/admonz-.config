@@ -116,7 +116,12 @@ xclip
 xcompmgr
 xdotool
 xkb-switch
-xorg
+xorg-server
+xorg-xev
+xorg-xbacklight
+xorg-xinit
+xorg-xsetroot
+xorg-xprop
 xwallpaper
 yarn
 youtube-dl
