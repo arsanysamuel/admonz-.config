@@ -39,7 +39,7 @@ imagemagick
 inetutils
 man-db
 man-pages
-mimi-bachoseven-git
+mimi
 mpc
 mpd
 mpv
