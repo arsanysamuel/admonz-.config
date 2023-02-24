@@ -68,6 +68,7 @@ pandoc-bin
 pcmanfm
 pdftk
 picocom
+pkgfile
 pulseaudio
 python-adblock
 python-arabic-reshaper
