@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Show time/date, volume and other status on dwm bar
+# TODO: kill the sleep 1 process every time any status (eg:volume) changes
+
+while true; do
+	date=$(date +"%a %d/%m/%Y")
+	time=$(date +"%I:%M:%S %P")
+	volume=$(pamixer --get-volume-human)  
+	current_layout=$(xkb-switch)
+    batterylevel=$(acpi -b | cut -d ' ' -f 4 | sed -e "s/,//")
+    chargerconnected=$(acpi -a | grep -q "on-line" && echo "+AC")
+
+    # Write to the status bar
+	xsetroot -name " $current_layout | bat:$batterylevel$chargerconnected | Vol:$volume | $time | $date"
+	sleep 1
+done
+
