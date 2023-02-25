@@ -62,7 +62,7 @@ openssh
 os-prober
 p7zip
 pacman-contrib
-pamix-git
+ncpamixer
 pamixer
 pandoc-bin
 pcmanfm
