@@ -70,6 +70,7 @@ pdftk
 picocom
 pkgfile
 pulseaudio
+pulseaudio-alsa
 python-adblock
 python-arabic-reshaper
 python-pip
