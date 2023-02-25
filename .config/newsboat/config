@@ -168,7 +168,7 @@ bind-key ^L show-urls
 #
 # Default value: "~/.newsboat/cache.db" or "~/.local/share/cache.db" (see "Files" section)
 #
- cache-file "~/.cache/newsboat/testcache.db"
+cache-file "~/.cache/newsboat/testcache.db"
 
 ####  cleanup-on-quit
 #

@@ -7,6 +7,7 @@ set ssl_starttls=no
 set ssl_force_tls=yes
 
 source $XDG_CONFIG_HOME/neomutt/gmail_pass  # use it to set imap and smtp passes for all accounts
+# create the file gmail_pass and set imap_pass and smtp_pass as commented below in it
 
 # Setting IMAP folder instead of local email storage (IMAP is the protocol for receiving emails)
 #set folder = "imaps://email_address@imap_server_domain:port"
