@@ -70,7 +70,14 @@ pcmanfm
 pdftk
 picocom
 pkgfile
-pulseaudio
+libpipewire
+libwireplumber
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+wireplumber
 python-adblock
 python-arabic-reshaper
 python-pip
@@ -128,6 +135,10 @@ xwallpaper
 yarn
 youtube-dl
 zathura
+zathura-cb
+zathura-djvu
+zathura-pdf-mupdf
+zathura-ps
 zip
 zsh
 libxcb
