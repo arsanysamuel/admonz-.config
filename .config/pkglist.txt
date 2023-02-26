@@ -69,8 +69,14 @@ pcmanfm
 pdftk
 picocom
 pkgfile
-pulseaudio
-pulseaudio-alsa
+libpipewire
+libwireplumber
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+wireplumber
 python-adblock
 python-arabic-reshaper
 python-pip
