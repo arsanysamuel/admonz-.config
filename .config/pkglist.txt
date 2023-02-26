@@ -6,6 +6,7 @@ archlinux-wallpaper
 arduino-cli
 arduino-language-server-bin
 autoconf
+autorandr
 automake
 base
 bash-completion
