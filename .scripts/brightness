@@ -24,5 +24,5 @@ else
     exit 1
 fi
 
-[ $brightness -gt $max_brightness -o $brightness -lt $(($max_brightness/10)) ] || echo $brightness > "$dir/brightness"
+[ $brightness -gt $max_brightness -o $brightness -lt $(($max_brightness/100)) ] || echo $brightness > "$dir/brightness"
 
