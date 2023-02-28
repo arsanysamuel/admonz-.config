@@ -1,4 +1,5 @@
-# Admonz hotkeys:  (NOTE: do not put comments in the same line with hotkeys
+# Admonz hotkeys:  (NOTE: do not put comments in the same line with hotkeys)
+# use $(xev -event keyboard) to get key codes
 
 # Browser
 alt + w
@@ -49,3 +50,8 @@ XF86AudioPlay
 XF86AudioStop
 	mpc stop
 
+XF86MonBrightnessUp
+    brightness -i 
+
+XF86MonBrightnessDown
+    brightness -d
