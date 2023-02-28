@@ -134,6 +134,7 @@ xorg-xprop
 xwallpaper
 yarn
 youtube-dl
+yt-dlp
 zathura
 zathura-cb
 zathura-djvu
