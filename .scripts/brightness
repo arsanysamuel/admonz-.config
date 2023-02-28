@@ -2,39 +2,27 @@
 
 # Adjust the brightness of the laptop screen
 # change screen path for other laptops
-# todo: grep for point in the argument: if floating point produce error.
 
-# Variables:  cannot put spaces before and after = i think
-max_brightness=$(</sys/class/backlight/acpi_video0/max_brightness)  # cat command in this case considered useless, this is like catting the file into the variable
-current_brightness=$(</sys/class/backlight/acpi_video0/brightness)
-#echo $max_brightness  # echo the variable
+dir="/sys/class/backlight/$(ls /sys/class/backlight)"
+max_brightness=$(cat $dir/max_brightness)
+current_brightness=$(cat $dir/brightness)
+step=$(($max_brightness/100))
 
-#echo $(whoami)  # who is running this
+[ "$#" -gt 2 -o "$1" == "-h" -o "$1" == "--help" ] && {
+    echo -e "Usage:\n\t$ brightness [-i] [-d] [step level]"
+    exit 1
+}
 
-if [ $(whoami) != "root" ]; then
-	echo "Must be run as root!"
-	echo -e "Usage:\n\t# brightness <level>\n"
-	echo -e "Current Brightness Level = $current_brightness  (might differ from the real level)"
-	echo -e "Max Brightness Level = $max_brightness"
+[ "$#" -eq 2 ] && step=$("$1")
+
+if [ "$1" == "-i" ]; then
+    brightness=$(($current_brightness+$step))
+elif [ "$1" == "-d" ]; then
+    brightness=$(($current_brightness-$step))
 else
-	#echo $#  # how many arguments
-	if [ $# -eq 1 -a $1 -le $max_brightness -a $1 -gt 0 ]; then  # number of args equal 1 and arg1 less than or equal max_brightness and arg1 more than 0
-		echo $1 > /sys/class/backlight/acpi_video0/brightness
-		echo -e "Brightness is set to $1."
-		echo -e "Max Brightness Level = $max_brightness"
-	else
-		if [ $# -lt 1 ]; then
-			echo -e "ERROR: Missing arguments: provide the desired brightness level.\n"
-		elif [ $# -gt 1 ]; then
-			echo -e "ERROR: Too many arguments.\n"
-		elif [ $1 -gt $max_brightness ]; then
-			echo -e "ERROR: Brightness level provided is greater than the maximum level.\n"
-		elif [ $1 -le 0 ]; then
-			echo -e "ERROR: Brightness level provided is less than the minimum level.\n"
-		fi
-
-		echo -e "Usage:\n\t# brightness <level>\n"
-		echo -e "Current Brightness Level = $current_brightness  (might differ from the real level)"
-		echo -e "Max Brightness Level = $max_brightness"
-	fi
+    echo -e "Invalid arguments, use -h for help."
+    exit 1
 fi
+
+[ $brightness -gt $max_brightness -o $brightness -lt $(($max_brightness/10)) ] || echo $brightness > "$dir/brightness"
+
