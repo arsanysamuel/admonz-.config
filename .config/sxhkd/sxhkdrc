@@ -55,3 +55,6 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
     brightness -d
+
+Scroll_Lock
+    toggletouchpad
