@@ -9,6 +9,8 @@ setxkbmap -model dellusbmm -layout us,ara -option grp:win_space_toggle &
 # Enable NUMLOCK
 numlockx  &
 
+# Toggle touchpad (if exists)
+
 # Start udiskie for automounting usb drives
 udiskie &
 
