@@ -3,7 +3,7 @@
 # Enables/Disables touchpad in laptops using xinput
 
 id=$(xinput list | grep -i "touchpad" | awk '{print $7}' | cut -d "=" -f 2)  # Touchpad device id
-enabled=$(xinput list-props 14 | grep "Device Enabled" | awk '{print $4}')  # Touchpad enabled state
+enabled=$(xinput list-props $id | grep "Device Enabled" | awk '{print $4}')  # Touchpad enabled state
 
 # Constructing command
 tcmd=$([ $enabled -eq "1" ] && echo "xinput disable $id" || echo "xinput enable $id")
