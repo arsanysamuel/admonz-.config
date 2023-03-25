@@ -2,6 +2,8 @@
 
 # This file is imported in .xinitrc to execute these commands
 
+# Loading display mode (must be set first)
+#autorandr --change default
 
 # Keyboard layout settings 
 setxkbmap -model dellusbmm -layout us,ara -option grp:win_space_toggle &
@@ -16,7 +18,7 @@ numlockx  &
 udiskie &
 
 # Fix for flameshot
-exec dbus-launch dwm &
+exec dwm &
 flameshot &
 
 # Setting wallpaper - just copy the image to .config and rename it - make sure there is only one image
