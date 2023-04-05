@@ -1,16 +1,33 @@
 #!/bin/sh
 
-# Enables/Disables touchpad in laptops using xinput
-
+### Enables/Disables touchpad in laptops using xinput, keeps the change presistent by adding the command to xprofile
+help="Toggle touchpad enabled or disabled\n\nUsage:\n\t$ toggletouchpad [-e|-d]\n\n-e: enable touchpad (optional)\n-d: disable touchpad (optional)\n"
 id=$(xinput list | grep -i "touchpad" | awk '{print $7}' | cut -d "=" -f 2)  # Touchpad device id
-enabled=$(xinput list-props $id | grep "Device Enabled" | awk '{print $4}')  # Touchpad enabled state
 
 # Constructing command
-tcmd=$([ $enabled -eq "1" ] && echo "xinput disable $id" || echo "xinput enable $id")
+if [ "$#" -eq 0 ]; then
+    enabled=$(xinput list-props $id | grep "Device Enabled" | awk '{print $4}')  # Touchpad enabled state
+    tcmd=$([ $enabled -eq "1" ] && echo "xinput disable $id" || echo "xinput enable $id")
+    xcmd=$([ $enabled -eq "1" ] && echo "toggletouchpad -d" || echo "toggletouchpad -e")
+elif [ "$#" -eq 1 ]; then
+    if [ "$1" == "-e" ]; then
+        tcmd="xinput enable $id"
+        xcmd="toggletouchpad -e"
+    elif [ "$1" == "-d" ]; then
+        tcmd="xinput disable $id"
+        xcmd="toggletouchpad -d"
+    else
+        printf "$help"
+        exit
+    fi
+else
+    printf "$help"
+    exit
+fi
 
 # Toggle touchpad (execute command)
 eval $tcmd
 
 # Add to .xprofile to keep presistent after reboot
-sed -i "/touchpad/{n;s/.*/$tcmd\ \&/}" ~/.xprofile
+sed -i "/touchpad/{n;s/.*/$xcmd\ \&/}" ~/.xprofile
 
