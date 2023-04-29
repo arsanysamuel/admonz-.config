@@ -118,6 +118,7 @@ unrar
 unzip
 urlscan
 usbutils
+usb_modeswitch
 vi
 vim
 w3m
