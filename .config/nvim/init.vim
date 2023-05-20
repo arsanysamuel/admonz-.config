@@ -93,6 +93,7 @@ syntax on
 " Vim Wiki Config:
 let g:vimwiki_list = [{'path': '$VIMWIKI',
 			\ 'syntax': 'markdown'}]
+let g:vimwiki_folding='list'
 
 "enable spell checking
 "set spell spelllang=en_us
