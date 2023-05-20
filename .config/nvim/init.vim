@@ -24,7 +24,8 @@ Plug 'vimwiki/vimwiki'  " Personal wiki for vim (org mode alternative
 " IDE Plugins:
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server', :CocInstall coc-python coc-jedi
 Plug 'preservim/nerdtree'  " File tree, binded to \
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " for nerdtree file names according to extension, works well with devicons
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'  " for nerdtree file names according to extension, works well with devicons
+Plug 'johnstef99/vim-nerdtree-syntax-highlight'  " for nerdtree file names according to extension, works well with devicons (maintained fork)
 Plug 'ryanoasis/vim-devicons'  " showing file icons in nerdtree, nerdfonts is a dependency
 Plug 'bfrg/vim-cpp-modern'  " C++ syntax hightlighting
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Python syntax highlighting
@@ -39,7 +40,7 @@ Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
 Plug 'Raimondi/delimitMate'  " auto close parenthesis, qutoes, etc.
 "Plug 'vim-syntastic/syntastic'  " syntax checker/linter, needs more config
-Plug 'glepnir/indent-guides.nvim'  "indent guide lines
+Plug 'preservim/vim-indent-guides'  "indent guide lines
 
 
 " LaTeX Plugins:
@@ -193,6 +194,9 @@ set encoding=utf-8
 
 " vim clipboard to system clipboard
 set clipboard=unnamedplus
+
+" vim-indent-guides auto enable
+let g:indent_guides_enable_on_vim_startup = 1
 
 
 " Key Bindings:
