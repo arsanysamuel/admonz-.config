@@ -30,6 +30,7 @@ Plug 'ryanoasis/vim-devicons'  " showing file icons in nerdtree, nerdfonts is a 
 Plug 'bfrg/vim-cpp-modern'  " C++ syntax hightlighting
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}  " Python syntax highlighting
 Plug 'majutsushi/tagbar'  " display tags in a window orderd by scope, still needs some configuration
+Plug 'tpope/vim-fugitive'  " Git plugin for vim, awsome plugin that makes vim aware of git
 "Plug 'Xuyuanp/nerdtree-git-plugin'  " showing git status in nerdtree, will use it one day
 "Plug 'airblade/vim-gitgutter'  " shows git diff in the sign column(the one on the left), will get to it later
 Plug 'alvan/vim-closetag'  " Auto close html tag
@@ -40,8 +41,9 @@ Plug 'ap/vim-css-color'  " highlights color values with the corresponding color
 "Plug 'hdima/python-syntax'  " probably will never use it as long as I'm using semshi with neovim 
 Plug 'Raimondi/delimitMate'  " auto close parenthesis, qutoes, etc.
 "Plug 'vim-syntastic/syntastic'  " syntax checker/linter, needs more config
-Plug 'preservim/vim-indent-guides'  "indent guide lines
-
+Plug 'preservim/vim-indent-guides'  " indent guide lines
+Plug 'vim-airline/vim-airline'  " Bottom vim bar
+Plug 'vim-airline/vim-airline-themes'
 
 " LaTeX Plugins:
 Plug 'lervag/vimtex'  " some latex thing that I can't get, probably just a bloat
@@ -66,11 +68,6 @@ Plug 'morhetz/gruvbox'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
-
-
-" WILL BE DEPRICATED: this is for nerd tree after addinf pathogen.vim to ~/.vim/autoload/
-"execute pathogen#infect()
-
 
 
 " User Defined Config:
@@ -146,6 +143,8 @@ set ignorecase
 "read the manual
 set smartcase  
 
+" detect file changes that happen outside of vim
+set autoread
 
 " use visual bell instead of beeping
 set visualbell 
@@ -198,6 +197,17 @@ set clipboard=unnamedplus
 
 " vim-indent-guides auto enable
 let g:indent_guides_enable_on_vim_startup = 1
+
+" vim-airline config
+"let g:airline_theme = "minimalist"
+let g:airline_theme = "gruvbox"
+let g:airline_powerline_fonts = 1  " give the cool unicode arrow shapes
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+let g:airline_section_c = '%F' " in section B of the status line display the full file path
+let g:airline_section_z = '' " in section B of the status line display the full file path
+let g:airline_section_warning = ''
+let g:airline_section_error = ''
 
 
 " Key Bindings:
