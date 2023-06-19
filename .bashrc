@@ -43,6 +43,9 @@ alias arduino-serial='picocom -c'
 alias android-qemu='qemu-system-x86_64 -enable-kvm -m 4G -drive file=~/unsorted/android/android-img.img'
 alias vimwiki='cd $VIMWIKI && nvim index.wiki'
 alias timer='termdown'
+alias gitree="git log --graph --all --decorate"
+alias sgitree="git log --graph --all --decorate --oneline"
+alias info="info --vi-keys"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 
