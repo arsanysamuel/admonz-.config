@@ -4,7 +4,7 @@ arch-wiki-docs
 arch-wiki-lite
 archlinux-wallpaper
 arduino-cli
-arduino-language-server-bin
+arduino-language-server
 autoconf
 autorandr
 automake
