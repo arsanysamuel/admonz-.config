@@ -36,15 +36,17 @@ export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export W3M_DIR="$XDG_STATE_HOME/w3m"
 export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.vim" | so $MYVIMRC'
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # Tensorflow extra variable
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
 
 # VimWiki PATH
-export VIMWIKI='/mnt/Collections/Projects/vimwiki/'
+export VIMWIKI='/path/to/vimwiki/'
 
 # NNN file manager config
-export NNN_BMS='h:~/;m:/mnt;r:/run/media;p:/mnt/Collections/Projects/;c:~/.config/'
+export NNN_BMS='h:~/;m:/mnt;r:/run/media;c:~/.config/;'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_COLORS='2134'
 export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'  # change later 
