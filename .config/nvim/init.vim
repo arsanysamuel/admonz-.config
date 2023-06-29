@@ -4,7 +4,7 @@
 "   \ V /| | | | | | | | | (__ 
 "    \_/ |_|_| |_| |_|_|  \___|
 "
-" https://gitlab.com/arsanysamuel/dotfiles
+" https://github.com/arsanysamuel/dotfiles
 "
 
 
@@ -210,10 +210,12 @@ let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
 
-" Key Bindings:
+""" Custom Commands:
+" Open presentation in sent, requires installing suckless sent
+command Sent !sent % 
 
-"code folding
-"nnoremap <space> za  "unneeded for now 
+
+""" Key Bindings:
 
 nnoremap <F5> :NERDTreeToggle<CR>
 " Inside NERDTree keymaps
