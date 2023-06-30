@@ -212,7 +212,7 @@ let g:airline_section_error = ''
 
 """ Custom Commands:
 " Open presentation in sent, requires installing suckless sent
-command Sent !sent % 
+command Sent w | !sent %
 
 
 """ Key Bindings:
