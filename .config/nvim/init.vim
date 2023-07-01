@@ -210,13 +210,16 @@ let g:airline_section_warning = ''
 let g:airline_section_error = ''
 
 
+""" Custom Filetypes:
+au! BufRead,BufNewFile *.sent setfiletype sent | set syntax=conf
+
+
 """ Custom Commands:
 " Open presentation in sent, requires installing suckless sent
-command Sent w | !sent %
+command Sent silent w | silent !sent %
 
 
 """ Key Bindings:
-
 nnoremap <F5> :NERDTreeToggle<CR>
 " Inside NERDTree keymaps
 let NERDTreeMapOpenInTab = 't'
@@ -229,6 +232,7 @@ map <C-c> <plug>NERDCommenterToggle
 " md previewer, will improve to preview latex or md depending on extension
 autocmd FileType markdown,vimwiki nmap <C-p> <Plug>MarkdownPreviewToggle
 autocmd FileType tex nmap <C-p> :LLPStartPreview<CR>
+autocmd FileType sent nmap <C-p> :Sent<CR>
 
 
 "" Syntastic sensible config:
