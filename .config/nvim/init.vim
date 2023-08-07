@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'  " Sensible config for vim, tpope is awsome
 "Plug 'junegunn/goyo.vim'  " aligning text to center with :Goyo
 Plug 'vimwiki/vimwiki'  " Personal wiki for vim (org mode alternative
+Plug 'tpope/vim-abolish'  " Adds 3 cool features to vim that deal with word casing
 
 " IDE Plugins:
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Better syntax completion. dependencies: nodejs, npm, yarn, 'pip install neovim pynvim jedi', 'npm install -g neovim', 'gem install neovim' , 'pacman -S jedi-language-server', :CocInstall coc-python coc-jedi
