@@ -7,7 +7,7 @@ alt + w
 
 # File Explorer
 alt + e
-	$TERMINAL -e nnn -e  
+	$TERMINAL -e nnn -er
 
 # screenshot: (see github page for info on running with dwm) 
 Print

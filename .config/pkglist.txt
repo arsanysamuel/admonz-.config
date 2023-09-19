@@ -1,4 +1,4 @@
-adwaita-qt5
+advcpmv
 alsa-utils
 arch-wiki-docs
 arch-wiki-lite
@@ -55,6 +55,8 @@ newsboat
 nmap
 nnn
 noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
 npm
 nss-mdns
 ntfs-3g
@@ -119,7 +121,6 @@ unzip
 urlscan
 usbutils
 usb_modeswitch
-vi
 vim
 w3m
 wget

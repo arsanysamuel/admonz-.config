@@ -20,16 +20,15 @@ alias rbt='reboot'
 alias sht='shutdown -h now'
 #alias sht='xdotool search "" windowkill %@ ; shutdown -h now'  # a solution for shutting down, might try if issues happened, might add to rbt, alt+shift+q as well, still doesn't work
 alias open='xdg-open'
-alias cp='cp -rv'
+alias cp='/usr/bin/advcp -rg'
 alias rm="rm -i"  # I'm a dumbass
 alias mkdir='mkdir -p'
-alias grep='grep --color=auto'
-alias mv='mv -v'
+alias mv='advmv -g'
 alias nvim='nvim -pN'
 alias vim='nvim -pN'
 alias bi='bicon.bin'
 alias sxiv='rsxiv'  # a script to browse all directroy images in sxiv
-alias nnn='nnn -e'
+alias nnn='nnn -er'
 alias transmission='stig'
 alias nmutt='cd $HOME/dls/email_attachments/ && neomutt'
 alias xclip='xclip -selection clipboard'
@@ -40,17 +39,17 @@ alias cheat='cht.sh'
 alias mnt='udiskie-mount -a'
 alias umnt='udiskie-umount -a'
 alias arduino-serial='picocom -c'
-alias android-qemu='qemu-system-x86_64 -enable-kvm -m 4G -drive file=~/unsorted/android/android-img.img'
 alias vimwiki='cd $VIMWIKI && nvim index.wiki'
 alias timer='termdown'
 alias gitree="git log --graph --all --decorate"
 alias sgitree="git log --graph --all --decorate --oneline"
 alias info="info --vi-keys"
+alias weather="curl wttr.in"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
 
-set HISTFILESIZE=300
-set HISTSIZE=300
+set HISTFILESIZE=-1  # Unlimited hist file size
+set HISTSIZE=-1  # Unlimited number of commands
 
 # pacman
 alias remove-orphans='sudo pacman -Rns $(pacman -Qqdt)'
@@ -95,7 +94,7 @@ n ()  # opens nnn and cd to the directory when exiting, alternative to shell key
     # stty lwrap undef
     # stty lnext undef
 
-    nnn -e "$@"
+    nnn -er "$@"
 
     if [ -f "$NNN_TMPFILE" ]; then
             . "$NNN_TMPFILE"

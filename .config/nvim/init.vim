@@ -258,8 +258,7 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd FileType qml setlocal tabstop=4 shiftwidth=4 expandtab softtabstop=4
 
 " delimitMate config
-autocmd FileType html let b:loaded_delimitMate = 0  " disable the plugin for html files (conflicts with closetag.vim)
-autocmd FileType jinja.html let b:loaded_delimitMate = 0  " disable the plugin for html files (conflicts with closetag.vim)
+autocmd FileType html,jinja.html,htmldjango let b:loaded_delimitMate = 0  " disable the plugin for html files (conflicts with closetag.vim)
 autocmd FileType vim let b:delimitMate_quotes = "'"  " setting quotes in vimrc files to ' only (pairing the double quote is annoying for comments)
 
 
