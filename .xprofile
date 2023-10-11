@@ -3,13 +3,16 @@
 # This file is imported in .xinitrc to execute these commands
 
 # Loading display mode (must be set first)
-#autorandr --change default
+autorandr --change ext
 
 # Keyboard layout settings 
 setxkbmap -model dellusbmm -layout us,ara -option grp:win_space_toggle &
 
+# Swap Capslock and ESC
+setxkbmap -option caps:swapescape &
+
 # Enable NUMLOCK
-numlockx  &
+numlockx &
 
 # Toggle touchpad (if exists)
 
@@ -22,7 +25,7 @@ exec dwm &
 flameshot &
 
 # Setting wallpaper - just copy the image to .config and rename it - make sure there is only one image
-xwallpaper --output DVI-I-1 --zoom /usr/share/backgrounds/archlinux/split.png &
+xwallpaper --center /usr/share/backgrounds/archlinux/small.png &
 
 # Simple X hotkey daemon
 sxhkd &
