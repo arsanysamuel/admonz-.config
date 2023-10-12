@@ -6,10 +6,7 @@
 autorandr --change ext
 
 # Keyboard layout settings 
-setxkbmap -model dellusbmm -layout us,ara -option grp:win_space_toggle &
-
-# Swap Capslock and ESC
-setxkbmap -option caps:swapescape &
+setxkbmap -model dellusbmm -layout us,ara -option grp:win_space_toggle -option caps:swapescape &
 
 # Enable NUMLOCK
 numlockx &
