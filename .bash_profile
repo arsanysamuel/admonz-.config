@@ -19,6 +19,11 @@ export BROWSER="qutebrowser"
 
 # Bash config
 export HISTCONTROL="ignoredups:erasedups"  # don't add duplicated entry to bash histroy, erase all previous duplicates
+export HISTFILESIZE=-1  # Unlimited hist file size
+export HISTSIZE=-1  # Unlimited number of commands
+
+# Keyboard config
+sudo -n loadkeys $XDG_CONFIG_HOME/keyboard/tty.map  # Will work only with NOPASSWD users
 
 # Wallpaper directory
 export WALLPAPERS='/usr/share/backgrounds/'
