@@ -96,7 +96,7 @@ let g:vimwiki_folding='list'
 "enable spell checking
 "set spell spelllang=en_us
 "setlocal spell spelllang=en_us  " for local buffer only
-autocmd FileType sent,markdown,latex setlocal spell
+autocmd FileType sent,markdown,tex setlocal spell
 
 " Arabic Support: nothing works
 set arabicshape

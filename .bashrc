@@ -24,18 +24,16 @@ alias cp='/usr/bin/advcp -rg'
 alias rm="rm -i"  # I'm a dumbass
 alias mkdir='mkdir -p'
 alias mv='advmv -g'
-alias nvim='nvim -pN'
-alias vim='nvim -pN'
 alias bi='bicon.bin'
 alias sxiv='rsxiv'  # a script to browse all directroy images in sxiv
 alias nnn='nnn -er'
 alias transmission='stig'
+alias bluetooth='bluetuith'
 alias nmutt='cd $HOME/dls/email_attachments/ && neomutt'
 alias xclip='xclip -selection clipboard'
 alias dns-up='sudo opennic-up -f /etc/resolv.conf'
 alias pipin='python3 -m pip install --upgrade'
 alias pipun='python3 -m pip uninstall'
-alias cheat='cht.sh'
 alias mnt='udiskie-mount -a'
 alias umnt='udiskie-umount -a'
 alias arduino-serial='picocom -c'
@@ -44,12 +42,8 @@ alias timer='termdown'
 alias gitree="git log --graph --all --decorate"
 alias sgitree="git log --graph --all --decorate --oneline"
 alias info="info --vi-keys"
-alias weather="curl wttr.in"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'  # for git bare repo, ref: https://news.opensuse.org/2020/03/27/Manage-dotfiles-with-Git/
-
-set HISTFILESIZE=-1  # Unlimited hist file size
-set HISTSIZE=-1  # Unlimited number of commands
 
 # pacman
 alias remove-orphans='sudo pacman -Rns $(pacman -Qqdt)'
@@ -71,6 +65,10 @@ source /usr/share/doc/pkgfile/command-not-found.bash  # requires pkgfile, see th
 # Auto cd
 shopt -s autocd
 
+
+## Silly stuff
+alias weather="curl wttr.in"
+eval $(thefuck --alias)  # for using `fuck` command
 
 ## Functions:
 

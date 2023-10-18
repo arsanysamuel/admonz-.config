@@ -63,6 +63,7 @@ ntfs-3g
 numlockx
 openprinting-ppds-postscript-ricoh
 openssh
+opennic-up
 os-prober
 p7zip
 pacman-contrib
@@ -98,9 +99,10 @@ termdown
 terminus-font
 texinfo
 texlive-most
+thefuck
 tk
 tmux
-tor-browser
+torbrowser-launcher
 traceroute
 transmission-cli
 ttf-amiri
